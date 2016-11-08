@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 2</title>
+	</head>
+<body>
+<a href="week1.html">< Week 1 - Introduction to Wireless Technology</a>
+<a href="#" class="top-right-link">Week 3 - Radio Frequency II ></a>
+
+<h6>WT Week 2</h6>
+
+<h1>Radio Frequency I</h1>
+
+<p><strong>tldr</strong> - Antenna &amp; Modulation Techniques</p>
+
+<h2>Modulation</h2>
+
+<blockquote>
+<p>The process of altering a carrier wave in order to use it to convey information</p>
+</blockquote>
+
+<h3>Analog Modulation</h3>
+
+<h4>Amplitude Modulation (AM)</h4>
+
+<blockquote>
+<p>The process of varying the amplitude of the carrier signal accordingly with the amplitude of message signal</p>
+</blockquote>
+
+<figure><img src="http://www.equestionanswers.com/notes/images/amplitude-modulation-waves.png" alt="Amplitude Modulation"/><figcaption>Amplitude Modulation</figcaption></figure>
+
+<h4>Frequency Modulation (FM)</h4>
+
+<blockquote>
+<p>The process of varying the frequency of the carrier signal accordingly with the amplitude of the message signal</p>
+</blockquote>
+
+<figure><img src="http://www.equestionanswers.com/notes/images/frequency-modulation-waves.png" alt="Frequency Modulation"/><figcaption>Frequency Modulation</figcaption></figure>
+
+<h4>Phase Modulation (PM)</h4>
+
+<blockquote>
+<p>The process of varying the phase of the carrier signal accordingly with the amplitude of the message signal</p>
+</blockquote>
+
+<figure><img src="http://www.equestionanswers.com/notes/images/phase-modulation-waves.png" alt="Phase Modulation"/><figcaption>Phase Modulation</figcaption></figure>
+
+<h3>Digital Modulation</h3>
+
+<h4>Amplitude-Shift Keying (ASK)</h4>
+
+<blockquote>
+<p>The process of varying the amplitude of the carrier signal in proportion to the message signal</p>
+</blockquote>
+
+<figure><img src="http://www.equestionanswers.com/notes/images/amplitude-shift-key.png" alt="Amplitude-Shift Keying"/><figcaption>Amplitude-Shift Keying</figcaption></figure>
+
+<ul>
+	<li>Basic form of ASK is On-Off Keying (OOK), where absence of carrier is 0 and presence of carrier is 1</li>
+	<li>Used in wireless LAN and Bluetooth</li>
+	<li>Multiple amplitude levels can be used to encode groups of bits</li>
+</ul>
+
+<figure><img src="http://www.indiastudychannel.com/attachments/Resources/161008-25448.JPG" alt="4-level ASK"/><figcaption>4-level ASK</figcaption></figure>
+
+<h4>Frequency-Shift Keying (FSK)</h4>
+
+<blockquote>
+<p>The process of varying the frequency of the carrier signal accordingly with the message signal</p>
+</blockquote>
+
+<figure><img src="http://www.equestionanswers.com/notes/images/frequency-shift-key.png" alt="Frequency-Shift Keying"/><figcaption>Frequency-Shift Keying</figcaption></figure>
+
+<ul>
+	<li>Output signal varies between 2 predetermined frequencies, logic 1 and logic 0</li>
+</ul>
+
+<h4>Phase-Shift Keying (PSK)</h4>
+
+<blockquote>
+<p>The process of shifting the phase of the carrier signal accordingly with the message signal</p>
+</blockquote>
+
+<figure><img src="http://www.equestionanswers.com/notes/images/phase-shift-key.png" alt="Phase-Shift Keying"/><figcaption>Phase-Shift Keying</figcaption></figure>
+
+<ul>
+	<li>Normally &lt; 8 phases so that phase signals are more distinct</li>
+	<li>Constellation diagrams are used to represent the PSK scheme used</li>
+</ul>
+
+<h5>Examples</h5>
+
+<p><strong>Binary PSK (BPSK)</strong></p>
+
+<ul>
+	<li>Simplest form of PSK</li>
+	<li>2-phase PSK</li>
+</ul>
+
+<figure><img src="http://i.imgur.com/OdRKreC.jpg" alt="BPSK Signals"/><figcaption>BPSK Signals</figcaption></figure>
+
+<p><strong>Quadrature PSK (QPSK)</strong></p>
+
+<ul>
+	<li>Each phase represents a 2-bit group: 00, 01, 10, 11</li>
+	<li>4-phase PSK</li>
+</ul>
+
+<figure><img src="http://i.imgur.com/aocYoS2.jpg" alt="QPSK Signals"/><figcaption>QPSK Signals</figcaption></figure>
+
+<h5>Constellation Diagrams</h5>
+
+<figure><img src="http://i.imgur.com/aCLF5VG.png" alt="Constellation Diagrams"/><figcaption>Constellation Diagrams</figcaption></figure>
+
+<p>The image shows the constellation diagrams for a 4-PSK scheme and an 8-PSK scheme respectively.</p>
+
+<h4>Quadrature Amplitude Modulation (QAM)</h4>
+
+<ul>
+	<li>The combination of <em>2-level ASK</em> and <em>QPSK</em></li>
+	<li>QPSK provides the 4 points in the constellation diagram for each amplitude (lines)</li>
+	<li>2-level ASK provides the 2 amplitudes in the constellation diagram (circles)</li>
+	<li>Each point represents 3 bits (e.g. 001)
+
+		<ul>
+			<li>1st 2 bits represent the phase (00)</li>
+			<li>3rd bit represents the amplitude (1)</li>
+		</ul></li>
+</ul>
+
+<figure><img src="http://i.imgur.com/lsgMOdR.png" alt="QAM Constellation Diagram"/><figcaption>QAM Constellation Diagram</figcaption></figure>
+
+<h2>Radio Frequency (RF) Components</h2>
+
+<h3>Transmitter</h3>
+
+<ul>
+	<li>Generates alternating current (AC) signal upon receiving digital data</li>
+	<li>AC signal oscillates 2.4 billion times per second for 2.4 GHz transmissions</li>
+	<li>Modifies AC signal by using a modulation technique to encode data into signal</li>
+	<li>Transmits modulated AC signal to <em>antenna</em></li>
+</ul>
+
+<h3>Antenna</h3>
+
+<ul>
+	<li>A passive conductor</li>
+	<li>Relies on power source (transmitter / receiver)</li>
+	<li>Collects AC signal received from <em>transmitter</em> and converts electricity into RF waves</li>
+	<li>RF waves are radiated away at the transmission end</li>
+	<li>Another antenna receives the RF waves</li>
+	<li>Converts RF waves into AC electric signals and passes it to the <em>receiver</em></li>
+</ul>
+
+<h3>Receiver</h3>
+
+<ul>
+	<li>Receives AC signal from <em>antenna</em></li>
+	<li>Demodulates AC signal into digital data</li>
+</ul>
+
+<h3>Properties of Antenna</h3>
+
+<h4>Signal Strength</h4>
+
+<p><strong>Loss</strong></p>
+
+<blockquote>
+<p>Signal energy decreased</p>
+</blockquote>
+
+<ul>
+	<li>RF signal received is weaker</li>
+	<li>Signal strength affected by
+
+		<ul>
+			<li>Distance</li>
+			<li>Noise</li>
+			<li>Absorption</li>
+			<li>Reflection</li>
+			<li>Refraction</li>
+			<li>Diffraction</li>
+			<li>Scattering</li>
+		</ul></li>
+</ul>
+
+<p><strong>Gain</strong></p>
+
+<blockquote>
+<p>Signal energy increased</p>
+</blockquote>
+
+<ul>
+	<li>Signal energy focused in one direction</li>
+	<li>Signal is put through an amplifier</li>
+</ul>
+
+<h5>Absorption</h5>
+
+<ul>
+	<li>Signal is absorbed if it does not bounce off, move around or pass through an object</li>
+	<li>2.4 GHz signal passed through a brick &amp; concrete wall will be 1/16 the original power (Fun fact)</li>
+</ul>
+
+<h5>Reflection</h5>
+
+<ul>
+	<li>Signals may bounce in an unintended direction when it hits a smooth object</li>
+	<li>Causes serious performance issues in WIFI</li>
+	<li>Multiple reflected signals degrade the signal’s strength and quality</li>
+</ul>
+
+<h5>Diffraction</h5>
+
+<ul>
+	<li>The bending and spreading of signals around an obstruction</li>
+	<li>Creates <em>RF shadows</em>, the spot behind the obstruction</li>
+	<li>RF shadow may become a dead zone of coverage</li>
+	<li>Thus, selecting antenna locations is important!</li>
+</ul>
+
+<h5>Refraction</h5>
+
+<ul>
+	<li>Signals passing through mediums with different densities can cause the direction of the wave to change</li>
+	<li>Commonly occurs as a result of atmospheric conditions</li>
+</ul>
+
+<h4>Power Ratio</h4>
+
+<p><strong>Decibel</strong></p>
+
+<blockquote>
+<p>Relative measurement used in calculations of gain and loss, to indicate the strength of a signal</p>
+</blockquote>
+
+<ul>
+	<li>Usually expressed as the logarithmic ratio of the <strong>strength of a transmitted signal</strong> to the <strong>strength of the original signal</strong></li>
+</ul>
+
+<p><strong>Forumla</strong></p>
+
+<figure><img src="http://i.imgur.com/lSJ6g0s.png" alt="P is measured in Watts (W)"/><figcaption>P is measured in Watts (W)</figcaption></figure>
+
+<h4>Antenna Types</h4>
+
+<h5>Omni-Directional Antenna</h5>
+
+<ul>
+	<li>RF signal spreads out equally in all directions</li>
+	<li>Radiated signals form a doughnut shape around the antenna</li>
+</ul>
+
+<h5>HIGH-GAIN Omni-Directional Antena</h5>
+
+<ul>
+	<li>Radiates signals in a “flatter” doughnut shape</li>
+	<li>Power per unit area is increases</li>
+	<li>2 dB gain relative to Omni-Directional design</li>
+</ul>
+
+<h5>Directional Antenna</h5>
+
+<ul>
+	<li>Reflecting element placed to the left of the antenna’s radiating element</li>
+	<li>Signal get directed in a certain direction</li>
+	<li>Power per unit area increases more</li>
+	<li>3 dB gain</li>
+</ul>
+
+<h5>HIGH-GAIN Directional Antenna</h5>
+
+<ul>
+	<li>Signal is radiated to one direction and has a “flatter” shape</li>
+	<li>Power per unit area increases even more</li>
+	<li>20 dB gain</li>
+</ul>
+
+<h3><em>fin</em></h3>
+
+</body>
+</html>

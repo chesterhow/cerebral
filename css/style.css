@@ -1,3 +1,7 @@
+/**
+ * Default Styling
+ */
+
 /*
   Day One 2
 
@@ -21,10 +25,8 @@ body {
   background:#FFF;
   font-family: "Lato-Regular", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 3% 10%;
+  padding: 10%;
   line-height: 1.6em;
-  max-width: 1024px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -259,6 +261,16 @@ a:target, ol#footnotes li:target, sup a:target  {
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in-out;
+}
+
+/**
+ * My styles
+ */
+
+body {
+  padding: 3% 10%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .top-right-link {
