@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 3</title>
+	</head>
+<body>
+<a href="week2.html">< Week 2 - Radio Frequency I</a>
+<a href="#" class="top-right-link">Week 4 (WIP) ></a>
+
+<h6>WT Week 3</h6>
+
+<h1>Radio Frequency II</h1>
+
+<p><strong>tldr</strong> - Problems and (some) solutions for radio wave transmission</p>
+
+<h2>Nyquist’s Formula</h2>
+
+<p>For a noiseless channel</p>
+
+<figure><img src="http://i.imgur.com/DksivDz.png" alt="Nyquist&#39;s Formula"/><figcaption>Nyquist&#39;s Formula</figcaption></figure>
+
+<p>Where </p>
+
+<ul>
+	<li>B is the bandwidth (Hz)</li>
+	<li>n is the number of possible <em>discrete levels</em> in the modulation method used</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>If the transmitter can generate signals with a bandwidth of 20 MHz, what is the maximum data rate of this channel using the 16-QAM modulation technique?</p>
+
+<figure><img src="http://i.imgur.com/NnqDl8g.png" alt="Solution"/><figcaption>Solution</figcaption></figure>
+
+<h2>Signal Power</h2>
+
+<p><strong>dBm</strong></p>
+
+<blockquote>
+<p>Power ratio (dB) of measured power referenced to 1 milliwatt (mW)</p>
+</blockquote>
+
+<ul>
+	<li>Both <strong>dBm</strong> and <strong>mW</strong> are measures of signal power</li>
+	<li>Used in radio, microwave and fibre optic networks as a measure of power</li>
+	<li>Able to express very large and very small values in a short form (compared to mW)</li>
+</ul>
+
+<h3>Converting mW to dBm</h3>
+
+<figure><img src="http://i.imgur.com/CQMuEqj.png" alt="Formula for converting mW to dBm"/><figcaption>Formula for converting mW to dBm</figcaption></figure>
+
+<h4>Example</h4>
+
+<p>Compute the signal strength of 0.0001 milliwatt in dBm</p>
+
+<figure><img src="http://i.imgur.com/N8yxI6M.png" alt="Solution"/><figcaption>Solution</figcaption></figure>
+
+<h2> Problems with Radio Wave Transmission</h2>
+
+<ul>
+	<li>Attenuation
+
+		<ul>
+			<li>Gradual loss in signal intensity through transmission medium</li>
+		</ul></li>
+	<li>Delay Distortion
+
+		<ul>
+			<li>Delay in travelling time in various RF components</li>
+		</ul></li>
+	<li>Radio Wave Interference (More below)</li>
+	<li>Limited Transmission Bandwidth (More below too)</li>
+</ul>
+
+<h5>Problem? 😱</h5>
+
+<h3>Radio Wave Interference</h3>
+
+<p>Radio signals have narrow frequency band ∴ interfering signal near the operating frequency of the radio devices render the device inoperable.</p>
+
+<h5>Solution? 🤔</h5>
+
+<h3>Spread Spectrum</h3>
+
+<blockquote>
+<p>A technique that takes a narrow band of signals and spreads it over a broader portion of the radio frequency band</p>
+</blockquote>
+
+<ul>
+	<li>Increases immunity to noise</li>
+	<li>Increases number of users using the same frequency band</li>
+	<li>Increases degree of difficulty to eavesdrop <em>(Side benefit)</em></li>
+	<li>2 spreading methods: FHSS &amp; DSSS</li>
+</ul>
+
+<h4>Frequency-Hopping Spread Spectrum (FHSS)</h4>
+
+<blockquote>
+<p>A method of transmitting radio signals by rapidly switching a carrier among many frequency channels using a random sequence known to both transmitter and the receiver</p>
+</blockquote>
+
+<p><strong>Advantages 👍🏼</strong></p>
+
+<ul>
+	<li>Lower cost of manufacturing</li>
+</ul>
+
+<p><strong>Disadvantages 👎🏼</strong></p>
+
+<ul>
+	<li>Slower transmission rate</li>
+	<li>Limited transmission distance</li>
+</ul>
+
+<p><strong>Usage</strong></p>
+
+<ul>
+	<li>Bluetooth</li>
+	<li>Cordless Phone</li>
+	<li>WLAN (1 &amp; 2 Mbps)</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<p>Decipher the message, given that the random FHSS sequence is 3 5 9 1 6 2 9 4 8.</p>
+
+<figure><img src="http://i.imgur.com/OIKoht8.png" alt="Y-axis represents time, X-axis represents frequency channel"/><figcaption>Y-axis represents time, X-axis represents frequency channel</figcaption></figure>
+
+<p>Answer: <strong>F R E Q U E N C Y</strong></p>
+
+<h4>Direct-Sequence Spread Spectrum (DSSS)</h4>
+
+<blockquote>
+<p>A spread spectrum modulation technique where data bits are XOR with a chipping code (a.k.a. Pseudo Noise Code or PNcode) to generate DSSS signals to be transmitted</p>
+</blockquote>
+
+<ul>
+	<li>Receiver will XOR received signals again using the same PNcode to extract original data</li>
+	<li>Longer PNcode
+
+		<ul>
+			<li>More bandwidth required</li>
+			<li>High probability to recover original data in case of error</li>
+		</ul></li>
+</ul>
+
+<p><strong>How it works</strong></p>
+
+<p>Narrowband data is transformed into broadband spread spectrum signals with the same total energy ∴ original data is <strong>spread</strong> over a broader band with lower power. The low-power signals appear as background noise to unintended receivers ∴ narrowing frequency band interference.</p>
+
+<p><em>It’s ok I’m confused too</em></p>
+
+<p><strong>Advantages 👍🏼</strong></p>
+
+<ul>
+	<li>Greater security as only intended receiver would have the chipping code</li>
+	<li>Faster transmission rate</li>
+</ul>
+
+<p><strong>Disadvantages 👎🏼</strong></p>
+
+<ul>
+	<li>Higher cost of manufacturing</li>
+</ul>
+
+<p><strong>Usage</strong></p>
+
+<ul>
+	<li>CDMA &amp; WCDMA</li>
+	<li>WLAN (5.5 &amp; 11 Mbps)</li>
+</ul>
+
+<h5>Problem? 😱</h5>
+
+<h3>Limited Transmission Bandwidth</h3>
+
+<p>Radio frequencies need to be shared among as many users as possible.</p>
+
+<h5>Solution? 🤔</h5>
+
+<h3>Channel Access Methods</h3>
+
+<p>Allow multiple users to access the same frequency band</p>
+
+<h4>Frequency Division Multiple Access (FDMA)</h4>
+
+<blockquote>
+<p>A channel access method which sub-divides the frequency band allocated to a network into multiple channels. Each channel is then assigned to a specific user</p>
+</blockquote>
+
+<p>👎🏼 Users face interference as frequencies are closely grouped</p>
+
+<h4>Time Division Multiple Access (TDMA)</h4>
+
+<blockquote>
+<p>A channel access method which allows numerous users to access each channel by allocating a unique time slot to each user within the channel</p>
+</blockquote>
+
+<h4>Code Division Multiple Access (CDMA)</h4>
+
+<blockquote>
+<p>A channel access method which allows multiple users to share a single channel simultaneously by using the spread spectrum technique</p>
+</blockquote>
+
+<ul>
+	<li>Each transmitter is assigned a code and only the intended receiver has the same code to recover signals</li>
+</ul>
+
+<h4>Orthogonal Frequency Division Multiplexing</h4>
+
+<blockquote>
+<p>A method of encoding digital data on multiple carrier frequencies</p>
+</blockquote>
+
+<p><strong>How it works</strong></p>
+
+<p>Many closely spaced orthogonal sub-carrier signals are used to carry data on several channels. Each sub-carrier is modulated with a conventional modulation scheme (e.g. QAM).</p>
+
+<p><strong>Usage</strong></p>
+
+<ul>
+	<li>Digital TV and audio broadcasting</li>
+	<li>Wireless networks</li>
+	<li>4G mobile communications</li>
+</ul>
+
+<h3><em>fin</em></h3>
+
+</body>
+</html>
