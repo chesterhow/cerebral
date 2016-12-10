@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 4</title>
+	</head>
+<body>
+	<a href="week3.html">< Week 3 - Radio Frequency II</a>
+	<a href="#" class="top-right-link">Week 6 (WIP) ></a>
+
+<h6>WT Week 4</h6>
+
+<h1>Wireless LAN I</h1>
+
+<p><strong>tldr</strong> - IEEE 802.11 standards, WLAN hardware, configurations and modes</p>
+
+<h2>IEEE 802.11 Standards</h2>
+
+<blockquote>
+<p>A set of media access control (MAC) and physical layer (PHY) specifications for implementing wireless local area network (WLAN) computer communication</p>
+</blockquote>
+
+<h3>Protocol Comparison</h3>
+
+<figure><img src="http://i.imgur.com/EzGSrr4.png"/></figure>
+
+<h3>802.11ac</h3>
+
+<p><strong>Cool stuff it provides</strong></p>
+
+<ul>
+	<li>Extended channel bonding
+
+		<ul>
+			<li>80 or 160 MHz channel width, as compared to 40 MHz in 802.11n</li>
+		</ul></li>
+	<li>Denser modulation
+
+		<ul>
+			<li>256-QAM used, as compared to 64-QAM in 802.11n</li>
+		</ul></li>
+	<li>More MIMO spatial streams (explained below)
+
+		<ul>
+			<li>8 streams (8x8:8), as compared to 4 in 802.11n</li>
+		</ul></li>
+	<li>Multi-User MIMO (Up to 4 clients)
+
+		<ul>
+			<li>4 separate receivers within an AP with multiple antennas on each receiver </li>
+		</ul></li>
+	<li>Beamforming
+
+		<ul>
+			<li>Focuses RF energy directly at receiving client</li>
+		</ul></li>
+</ul>
+
+<h2>Multiple Input, Multiple Output (MIMO)</h2>
+
+<blockquote>
+<p>Uses multiple transmitters and receivers to transfer data simultaneously</p>
+</blockquote>
+
+<h3>MIMO as pure Transmitter and Receiver Diversity (Spatial Diversity)</h3>
+
+<ul>
+	<li>Same data is transmitted and received with multiple antennas</li>
+	<li>Multiple copies of the same data <strong>improves reliability</strong> of system</li>
+</ul>
+
+<h3>MIMO as pure Spatial Multiplexing</h3>
+
+<ul>
+	<li>Different data is transmitted and received over multiple data streams</li>
+	<li><strong>Increases data throughput</strong> N-fold, where N is no. of data streams</li>
+</ul>
+
+<h3>MIMO hybrid mode (Spatial Diversity &amp; Spatial Multiplexing)</h3>
+
+<ul>
+	<li>Improves reliability AND increases data throughput</li>
+	<li>Possible when there are more antennas than data streams</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<p>4x4:3 MIMO</p>
+
+<ul>
+	<li>4 input and 4 output antennas over 3 data streams</li>
+	<li>Hybrid mode is possible</li>
+</ul>
+
+<h2>Frequency Bands &amp; Channels</h2>
+
+<ul>
+	<li>WLAN operates on certain frequency bands, such as 2.4 GHz and 5 GHz</li>
+	<li>Each band is divided into many frequency channels</li>
+	<li>For 2.4 GHz, many channels overlap, hence to reduce interference, adjacent WLANs should use different frequency channels</li>
+</ul>
+
+<figure><img src="http://i.imgur.com/zIIkqTi.png" alt="2.4 GHz channels"/><figcaption>2.4 GHz channels</figcaption></figure>
+
+<h3>802.11 Channels</h3>
+
+<ul>
+	<li>Bandwidth of each channel is 20 MHz and Passband between channels is 5 MHz</li>
+	<li>Only 3 non-overlapping channels
+
+		<ul>
+			<li>Channel 1 (2.412 GHz)</li>
+			<li>Channel 6 (2.437 GHz)</li>
+			<li>Channel 11 (2.462 GHz)</li>
+		</ul></li>
+</ul>
+
+<figure><img src="http://i.imgur.com/LNmYCpD.png" alt="Channel Bandwidth and Passband"/><figcaption>Channel Bandwidth and Passband</figcaption></figure>
+
+<h3>5 GHz vs 2.4 GHz Frequency Band</h3>
+
+<p>👍🏼</p>
+
+<ul>
+	<li><strong>Relatively interference free</strong>, whereas 2.4 GHz is more prone to interference as cordless home phones and microwaves also share this band</li>
+	<li><strong>Faster speeds </strong>with the same channel width as 2.4 GHz</li>
+	<li>23 non-overlapping channels as compared to 3 in 2.4 GHz</li>
+</ul>
+
+<p>👎🏼</p>
+
+<ul>
+	<li>Higher frequency signals of 5 GHz do not penetrate solid objects as well as 2.4 GHz signals ∴ shorter coverage range (higher frequency =&gt; shorter coverage range)</li>
+</ul>
+
+<h2>Hardware for WLAN</h2>
+
+<h3>Wireless Network Interface Card (WNIC)</h3>
+
+<p>Required for devices to access wireless networks</p>
+
+<h3>Wireless Access Point</h3>
+
+<p>Transmits and receives data</p>
+
+<h3>Wireless Router</h3>
+
+<ul>
+	<li>Comprises of
+
+		<ul>
+			<li>Access Point</li>
+			<li>Switch: Connects desktops, printers, servers etc.</li>
+			<li>Router: Provide internet connection through ISP via ONT / modem</li>
+		</ul></li>
+	<li>DHCP (Dynamic Host Configuration Protocol) &amp; NAT (Network Address Translation) capabilities</li>
+</ul>
+
+<h2>WLAN Configuration</h2>
+
+<p>AP or wireless router has to be configured to setup a WLAN. </p>
+
+<h3>Identification (SSID)</h3>
+
+<blockquote>
+<p>Name of WLAN</p>
+</blockquote>
+
+<p><strong>Properties of SSID</strong></p>
+
+<ul>
+	<li>Case sensitive</li>
+	<li>Alphanumeric</li>
+	<li>Max 32 characters</li>
+</ul>
+
+<p><strong>How it works</strong> 🤔</p>
+
+<ol>
+	<li>SSID is broadcast to all wireless devices within coverage range</li>
+	<li>Clients manually select SSID of WLAN to join</li>
+</ol>
+
+<h3>Frequency Channels</h3>
+
+<p><strong>Auto</strong> - AP selects best channel</p>
+
+<p><strong>Manual</strong> - Configure which channel to be used</p>
+
+<ul>
+	<li>Channels 1 to 11 are available in Singapore</li>
+	<li>Only 1, 6 and 11 are used (non-overlapping)</li>
+</ul>
+
+<h3>Wireless Security</h3>
+
+<p><strong>Types</strong> (Elaborated in week 7 notes)</p>
+
+<ul>
+	<li>Open</li>
+	<li>WEP</li>
+	<li>WPA / WPA2</li>
+	<li>WPA-Enterprise / WPA2-Enterprise</li>
+</ul>
+
+<h3>Other Configurations</h3>
+
+<h4>IP Address &amp; Subnet Mask</h4>
+
+<p>AP or wireless router is also an IP host, hence IP address and subnet mask is required</p>
+
+<h4>DHCP</h4>
+
+<p>Configure range of IP addresses to be used by DHCP server</p>
+
+<h4>NAT</h4>
+
+<p>On by default</p>
+
+<h4>MAC Address Filter List</h4>
+
+<p>Specify a list of valid MAC-addresses which are allowed to join the WLAN. <strong>Not recommended</strong> as MAC addresses can be easily found using network monitoring tools and can be spoofed</p>
+
+<h2>Wireless LAN (WLAN) and Wired LAN</h2>
+
+<h3>Wireless LAN</h3>
+
+<ul>
+	<li>Provides hosts with physical mobility</li>
+	<li>Servers and network resources are still connected by wired network</li>
+</ul>
+
+<h3>Wired LAN</h3>
+
+<ul>
+	<li>Backbone connecting users to servers and resources</li>
+</ul>
+
+<h2>WLAN Modes</h2>
+
+<h3>Ad Hoc</h3>
+
+<p>Wireless devices connect directly to each other without the use of an AP or wireless router</p>
+
+<h4>Independent Basic Service Set (IBSS)</h4>
+
+<ul>
+	<li>Easy to set up</li>
+	<li>Optional to specify SSID &amp; Frequency channel</li>
+	<li>Small coverage and limited users</li>
+	<li>Useful for peer-to-peer comms</li>
+	<li>Can achieve high speeds but with limited functionalities</li>
+</ul>
+
+<h3>Infrastructure</h3>
+
+<p>Wireless router acts as</p>
+
+<ul>
+	<li>Router: connects WLAN to the internet</li>
+	<li>Switch: connects desktops, servers, printers etc. to WLAN</li>
+	<li>AP: provide wireless connectivity to wireless devices</li>
+</ul>
+
+<h4>Basic Service Set (BSS)</h4>
+
+<ul>
+	<li>Requires at least 1 AP</li>
+	<li>Uses basic AP settings: SSID, security type, encryption type</li>
+</ul>
+
+<h4>Extended Service Set</h4>
+
+<ul>
+	<li>Uses 2 or more APs</li>
+	<li>Coverage ares of Paps should overlap</li>
+	<li>APs must have the same SSID</li>
+	<li>Adjacent APs must have different channel frequencies</li>
+</ul>
+
+<p><strong>WLAN Roaming</strong></p>
+
+<ul>
+	<li>When wireless client moves from one point to another, it looks for an AP which provides a better service</li>
+	<li>Seamless handoff occurs when the client connects to a different AP</li>
+</ul>
+
+</body>
+</html>
