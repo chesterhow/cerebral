@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 6</title>
+	</head>
+<body>
+<h6>WT Week 6</h6>
+
+<h1>Wireless LAN II</h1>
+
+<p><strong>tldr</strong> - IEEE 802.11 Medium Access Controls, Types of frames, and WiFi association and re-association process</p>
+
+<h2>MAC Methods for Ethernet Network (Recap)</h2>
+
+<blockquote>
+<p>CSMA/CD is a Data Link Layer Protocol which defines the access method for IEEE 802.3 (Ethernet) Networks.</p>
+
+<p>CSMA/CD: Carrier Sense Multiple Access with Collision Detection</p>
+</blockquote>
+
+<ul>
+	<li>Before <strong>transmission</strong>, a station must first listen</li>
+	<li>During transmission, the station should continue to listen</li>
+	<li>If a collision is detected, each station should stop transmission, send a “jammed” signal and re-transmit after a random interval</li>
+</ul>
+
+<h3>Problem of CSMA/CD with Wireless Networks</h3>
+
+<blockquote>
+<p>CSMA/CD used in Ethernet <strong>cannont be used in WLAN</strong>, because <strong>collision are difficult to detect</strong></p>
+</blockquote>
+
+<ul>
+	<li>With CSMA/CD, stations must be able to transmit and listen at the same time</li>
+	<li>In radio systems, the power of transmitted signal is higher than the power of the received signal</li>
+	<li>As a result, the transmitting station will overpower the same station’s ability to received a transmission</li>
+	<li>This means a transmitting station “drowns out” its ability to detect a collision</li>
+	<li>Thus, CSMA/CD cannot be used for IEEE 802.11 networks</li>
+</ul>
+
+<h2>MAC Methods for IEEE 802.11 Networks</h2>
+
+<p>Two MAC methods are used:</p>
+
+<h3>Distributed Coordination Function (DCF)</h3>
+
+<blockquote>
+<p>Commonly referred as CSMA/CA</p>
+</blockquote>
+
+<ul>
+	<li>Mandatory</li>
+	<li>Contention-based</li>
+	<li>Specifies that a modified procedure, Carrier-Sense Multiple Access with Collision Avoidance (CSMA/CA) be used</li>
+</ul>
+
+<h4>Description</h4>
+
+<ul>
+	<li>In CSMA/CA, after a station has successfully transmitted a frame, all stations wait a random time when medium is cleared before the next transmission takes place.</li>
+	<li>For IEEE 802.11b, each time slots is 20 microseconds</li>
+	<li>Thus, if client’s random back-off period is 3 time slots, it has to wait for 60ms before attempting to transmit</li>
+	<li>This reduces collision from taking place</li>
+	<li>With radio-based LANS, a transmitting station cannot listen for collisions while sending data.</li>
+	<li>Receiving stations has to send and acknowledgement (ACK) to the senders if it detects no error in the received frame</li>
+	<li>If sending station does not receive an ACK after a specified period of time, the sending station would assume that a collision happen and the frame is retransmitted</li>
+	<li>One draw back is the high overheads (every data need acknowledgement); hence the actual throughput is lower.</li>
+</ul>
+
+<h4>RTS/CTS</h4>
+
+<blockquote>
+<p>To reduce collisions further, Distributed Coordination Function incorporates optional use of Request To Send (RTS) and Clear to Send (CTS)</p>
+</blockquote>
+
+<ul>
+	<li>Sending station sends RTS frame to AP</li>
+	<li>AP broadcast RTS frame to Receiving Station, requesting for a certain amount of time to deliver data to it
+
+		<ul>
+			<li>The RTS frame contains the source, destination address and the duration of the transmission</li>
+		</ul></li>
+	<li>If ready to accept data, the Receiving station responds with CTS frame</li>
+	<li>AP sends CTS frame to sending client.</li>
+	<li>AP alerts all station the medium is now reserved and they should suspend transmissions</li>
+	<li>Sending client will begin transmission upon receipt of the CTS from the AP</li>
+</ul>
+
+<p><img src="https://i.imgur.com/pTeFHyX.png" alt="Sending of RTS/CTS"/> Sending of RTS/CTS frames</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Csma_ca.svg/680px-Csma_ca.svg.png" alt="Simplified Alogorith of CSMA/CA"/> A Simplified Algorithm of CSMA/CA</p>
+
+<h3>Point Coordination Function (PCF)</h3>
+
+<ul>
+	<li>Optional polling function in IEEE 802.11 networks</li>
+	<li>Point coordinator in AP controls the transmission of frames from all clients</li>
+	<li>Each clients are asked in sequence if it wants to transmit</li>
+	<li>If there is nothing to transmit, the client returns a null data frame</li>
+	<li>Suitable for <strong>time-sensitive data such as voice &amp; video</strong></li>
+	<li>Greater overhead due to polling frames</li>
+</ul>
+
+<p><img src="https://i.imgur.com/cwbLBvy.png"/> Polling </p>
+
+<h2>MAC Frame Formats</h2>
+
+<blockquote>
+<p>IEEE 802.11 MAC frames are not the same as 802.3 Ethernet frames. They have different formats and functions. </p>
+</blockquote>
+
+<p>802.11 specifies 3 different MAC frame formats</p>
+
+<h3>Management Frames</h3>
+
+<ul>
+	<li>Set up initial communication between client and AP. E.g. association request, association response</li>
+</ul>
+
+<h3>Control Frames</h3>
+
+<ul>
+	<li>Provide information in delivering frame that contains data. E.g RTS, CTS, ACK</li>
+</ul>
+
+<h3>Data Frames</h3>
+
+<ul>
+	<li>Carry information to be transmitted to destination client</li>
+</ul>
+
+<h2>MAC layer operations</h2>
+
+<p>MAC layer has 3 main types of roles</p>
+
+<h3>Discovering the WLAN</h3>
+
+<blockquote>
+<p>A client must first find an AP</p>
+</blockquote>
+
+<ul>
+	<li>An AP must transmit information about itself so that the client can connect to it</li>
+	<li>Discovery process is done by passive or active scanning</li>
+</ul>
+
+<h4>Passive Scanning</h4>
+
+<ul>
+	<li>The AP sends a beacon frame to announce its presence at regular interval</li>
+	<li>Client listens for beacon frame containing AP’s Service Set Identifier (SSID)</li>
+</ul>
+
+<h4>Active Scanning</h4>
+
+<ul>
+	<li>Client sends out probe request frame (may contain SSID of the desired AP) and wait for probe response frame from AP(s)</li>
+</ul>
+
+<h3>Joining the WLAN</h3>
+
+<blockquote>
+<p>After locating AP, client initiates the authentication and association steps of doing the network via the AP</p>
+</blockquote>
+
+<h4>Authentication</h4>
+
+<ul>
+	<li>AP requires the client to be authenticated prior to being connected to the network</li>
+	<li>Authentication is a process in which the AP accepts a client</li>
+</ul>
+
+<h4>Types of Authentication:</h4>
+
+<h5>Open System Authentication</h5>
+
+<ul>
+	<li>A basic and default method</li>
+	<li>Client sends an authentication request frame to the AP.</li>
+	<li>The AP replies with an authentication response frame. Either a rejection or acceptance notice</li>
+</ul>
+
+<h5>Shared Key Authentication</h5>
+
+<ul>
+	<li>AP and client given the same key in advance</li>
+	<li>Client sends an authentication frame to AP</li>
+	<li>AP responds with an authentication frame with a challenge text</li>
+	<li>Client must encrypt the text with the key and respond</li>
+	<li>AP would verify the encryption key used</li>
+</ul>
+
+<h3>Transmitting on WLAN</h3>
+
+<p>CSMA/CA</p>
+
+<h2>Association</h2>
+
+<blockquote>
+<p><strong>tldr</strong> - Association is achieved by either passive or active scanning. After locating AP (the one with the strongest signal), client initiates the authentication and association steps of joining the network via the AP.</p>
+</blockquote>
+
+<p>WLAN connection</p>
+
+<ol>
+	<li>The client can begin negotiating a WLAN connection with the AP</li>
+	<li>To join the WLAN, the client sends an <strong>association request frame</strong> to the AP. The request frame includes the client’s own capabilities and supported data rates.</li>
+	<li>If AP accepts the request, it will send back an <strong>association response frame</strong>. It contains the status code and client ID number that will be used while the client</li>
+	<li>At this point, the client becomes part of the WLAN and can begin communicating</li>
+</ol>
+
+<h2>Re-association</h2>
+
+<blockquote>
+<p><strong>tldr</strong> - Re-association is important because it allows a device in an area covered by an AP to move to another area covered by another AP to remain connected to the network (seamless roaming). It is particularly useful in ESS environment.</p>
+</blockquote>
+
+<ol>
+	<li>When client determine that the link to its current AP is poor, it begins scanning for another AP</li>
+	<li>It sends a new <strong>re-association request frame</strong> to the new AP</li>
+	<li>If AP accepts request, it sends back a <strong>re-association request frame</strong> to the client</li>
+	<li>The new AP also sends a <strong>disassociation frame</strong> to the old AP</li>
+	<li>This is to terminate the old AP’s association with the client</li>
+	<li>This features allows wireless clients to roam beyond coverage are of a single AP</li>
+</ol>
+
+</body>
+</html>
