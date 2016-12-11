@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 7</title>
+	</head>
+<body>
+	<a href="week6.html">< Week 6 - Wireless LAN II</a>
+	<a href="#" class="top-right-link">Week X (WIP) ></a>
+
+<h6>WT Week 7</h6>
+
+<h1>Wireless Security</h1>
+
+<p><strong>tldr</strong> - WLAN security threats &amp; authentication</p>
+
+<h2>WLAN Security Threats</h2>
+
+<h3>Access point impersonation (Rogue APs)</h3>
+
+<ul>
+	<li>AP connected to corporate wired-LAN</li>
+	<li>Hacker plants AP with the same corporate SSID to entice users to associate with it</li>
+</ul>
+
+<h3>Ad Hoc Networks</h3>
+
+<ul>
+	<li>Peer-to-peer connection between stations (without an AP)</li>
+	<li>Does not have corporate security</li>
+	<li>Any station can enter as long as it is also connected to the wired LAN</li>
+</ul>
+
+<h3>Passive Attacks</h3>
+
+<ul>
+	<li>Hacker gathers information to be used in an active attack, scheduled for execution later</li>
+	<li>Wireless sniffing often used</li>
+	<li>Hacker captures large amounts of raw frames to analyse to discover a key for decryption</li>
+</ul>
+
+<h3>Denial of Service</h3>
+
+<ul>
+	<li>Jams the frequency where the WLAN is located</li>
+	<li>Causes interruption of service</li>
+	<li>Floods wireless network with probe requests or association frames making the network unusable</li>
+</ul>
+
+<h2>Authentication</h2>
+
+<blockquote>
+<p>The process in which the wireless client has its identity verified by the AP</p>
+</blockquote>
+
+<h3>Authentication Methods</h3>
+
+<h4>No authentication</h4>
+
+<ul>
+	<li>Open</li>
+</ul>
+
+<p><strong>How it works</strong></p>
+
+<ol>
+	<li>Client sends probe request</li>
+	<li>APs send probe responses</li>
+	<li>Client selects best response &amp; sends authentication request to selected AP</li>
+	<li>AP confirms authentication and registers client</li>
+	<li>Client sends association request to AP</li>
+	<li>AP confirms association and registers client</li>
+</ol>
+
+<p>👎🏼</p>
+
+<ul>
+	<li>No authentication</li>
+	<li>No data encryption</li>
+</ul>
+
+<h4>Pre-Shared Key</h4>
+
+<ul>
+	<li>WEP</li>
+	<li>WPA-Personal</li>
+	<li>WPA2-Personal</li>
+</ul>
+
+<p><strong>How it works</strong></p>
+
+<ol>
+	<li>Client sends probe request</li>
+	<li>APs send probe responses</li>
+	<li>Client selects best response &amp; sends authentication request to selected AP</li>
+	<li>AP sends authentication response containing unencrypted challenge text</li>
+	<li>Client encrypts the challenge text using one of its WEP keys and sends it to AP</li>
+	<li>AP compares encrypted challenge text with its own encrypted challenge text. If same, AP allows client onto WLAN</li>
+</ol>
+
+<h5>Wired Equivalent Privacy (WEP)</h5>
+
+<ul>
+	<li>Uses static keys</li>
+	<li>Keys are shared among devices &amp; APs</li>
+	<li><strong>Fun fact:</strong> WEP was compromised in late 2000 (so stop using WEP)</li>
+</ul>
+
+<h5>WPA2</h5>
+
+<ul>
+	<li>Uses Temporal Key Integrity Protocol (TKIP) or Advanced Encryption Standard (AES)</li>
+	<li>Stronger encryption than WEP</li>
+	<li><strong>Fun fact:</strong> WPA2 superseded WEP in 2003 (yes use WPA2)</li>
+</ul>
+
+<h4>Authentication Server</h4>
+
+<ul>
+	<li>WPA-Enterprise</li>
+	<li>WPA2-Enterprise</li>
+	<li>802.1x</li>
+</ul>
+
+<h5>WPA2-Enterprise</h5>
+
+<ul>
+	<li>Same encryption schemes as WPA2 / WPA2-Personal - TKIP &amp; AES</li>
+	<li>Use 802.1X with Extensible Authentication Protocol (EAP) method for authentication
+
+		<ul>
+			<li>Requires authentication server</li>
+			<li>Remote Authentication Dial-In User Service (RADIUS) server is used for dynamic key generation upon authentication. It sends security keys to wireless clients</li>
+		</ul></li>
+</ul>
+
+</body>
+</html>

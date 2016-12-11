@@ -8,6 +8,7 @@ I create my notes using Markdown in Ulysses, then I export it in HTML. Nothing f
 Thanks to all who contributed and found typos
 - [@AlphaTRL](https://github.com/AlphaTRL)
 - [@elcoms](https://github.com/elcoms)
+- [@ivantjh](https://github.com/ivantjh)
 
 ## License
 See [LICENSE](https://github.com/chesterhow/cerebral/blob/master/LICENSE)
