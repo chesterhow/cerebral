@@ -18,74 +18,116 @@
   https://www.google.com/fonts/download?kit=NdjKCQMCiQM2g3qf94rrwQ
 
 */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
 body {
   font-size: 12pt;
   color:#444;
   background:#FFF;
-  font-family: "Lato-Regular", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Regular", Helvetica, sans-serif;
+  font-family: Lato, "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 10%;
   line-height: 1.6em;
 }
 
 h1 {
-  font-family: "Lato-Bold", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Bold", Helvetica, sans-serif;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.35em;
-  font-weight: normal;
+  font-weight: 700;
   line-height: 1.5em;
 }
 
-h1 strong, h1 dfn {font-family: "Lato-Black", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Black", Helvetica, sans-serif;}
-h1 em, h1 dfn {font-family: "Lato-BoldItalic", "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-BoldItalic", Helvetica, sans-serif;}
+h1 strong, h1 dfn {
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+h1 em, h1 dfn {
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
 
 h2 {
-  font-family: "Lato-Black", "Lato-Regular", "AvenirNext-Bold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Black", Helvetica, sans-serif;
+  font-family: Lato, "Lato-Regular", "AvenirNext-Bold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.22em;
-  font-weight: normal;
+  font-weight: 900;
   line-height: 1.6em;
 }
 
-h2 strong, h2 dfn {font-family: "Lato-Bold", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Bold", Helvetica, sans-serif;}
-h2 em, h2 dfn {font-family: "Lato-BlackItalic", "Lato-Regular", "AvenirNext-BoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-BlackItalic", Helvetica, sans-serif;}
+h2 strong, h2 dfn {
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+h2 em, h2 dfn {
+  font-family: Lato, "Lato-Regular", "AvenirNext-BoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
 
 h3 {
-  font-family: "Lato-Bold", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Bold", Helvetica, sans-serif;
-  font-weight: normal;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: #e84f89;
   font-size: 1.13em;
   line-height: 1.4em;
 }
 
-h3 strong, h3 dfn {color: #e84f89; font-family: "Lato-Black", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Black", Helvetica, sans-serif;}
-h3 em, h3 dfn {font-family: "Lato-BoldItalic", "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-BoldItalic", Helvetica, sans-serif;}
+h3 strong, h3 dfn {
+  color: #e84f89;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+h3 em, h3 dfn {
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
 
 h4 {
-  font-family: "Lato-Bold", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Bold", Helvetica, sans-serif;
-  font-weight: normal;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 700;
   color: #4cc1fc;
   font-size: 1em;
   line-height: 1.4em;
 }
 
-h4 strong, h4 dfn {color: #4cc1fc;font-family: "Lato-Black", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Black", Helvetica, sans-serif;}
-h4 em, h4 dfn {font-family: "Lato-BoldItalic", "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-BoldItalic", Helvetica, sans-serif;}
+h4 strong, h4 dfn {
+  color: #4cc1fc;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+h4 em, h4 dfn {
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 h5 {
-  font-family: "Lato-Bold", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Bold", Helvetica, sans-serif;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #aaaaaa;
-  font-weight: normal;
+  font-weight: 700;
   font-size: .83em;
   line-height: 1.4em;
   padding-bottom: 4px;
   border-bottom: solid 1px #f0f0f0;
 }
 
-h5 strong, h5 dfn {color: #aaaaaa;font-family: "Lato-Black", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Black", Helvetica, sans-serif;}
-h5 em, h5 dfn {font-family: "Lato-BoldItalic", "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-BoldItalic", Helvetica, sans-serif;}
+h5 strong, h5 dfn {
+  color: #aaaaaa;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+h5 em, h5 dfn {
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
 
 h6 {
-  font-family: "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Regular", Helvetica, sans-serif;
+  font-family: "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: #aaaaaa;
   font-size: .83em;
@@ -112,20 +154,37 @@ blockquote {
     color: #aaaaaa;
     font-size: 1.13em;
     line-height: 1.4em;
-    font-family: "Lato-LightItalic", "Lato-Regular", "AvenirNext-UltraLightItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-LightItalic", Helvetica, sans-serif;
+    font-family: Lato, "Lato-Regular", "AvenirNext-UltraLightItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue",Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-style: italic;
     padding-left: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
     quotes: none;
 }
-blockquote strong, blockquote dfn {color: #aaaaaa;font-family: "Lato-BoldItalic", "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-BoldItalic", Helvetica, sans-serif;}
-blockquote em, blockquote dfn {font-family: "Lato-Light", "AvenirNext-UltraLight", -apple-system, "Helvetica Neue", "Arial-Light", Helvetica, sans-serif;}
+
+blockquote strong, blockquote dfn {
+  color: #aaaaaa;
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBoldItalic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+blockquote em, blockquote dfn {
+  font-family: Lato, "AvenirNext-UltraLight", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
 strong, dfn {
-  font-family: "Lato-Bold", "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Bold", Helvetica, sans-serif;
-  font-weight:normal; color: #252525;}
+  font-family: Lato, "Lato-Regular", "AvenirNext-DemiBold", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #252525;
+}
+
 em, dfn {
-  font-family: "Lato-Italic", "Lato-Regular", "AvenirNext-Italic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", "Arial-Italic", Helvetica, sans-serif;
-  font-style:normal;}
+  font-family: Lato, "Lato-Regular", "AvenirNext-Italic", "AvenirNext-Regular", -apple-system, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: italic;;
+}
 
 del {color:#666;}
 pre {margin:1em 0;white-space:pre;}
