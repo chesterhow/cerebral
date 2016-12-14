@@ -335,3 +335,20 @@ body {
 .top-right-link {
   float: right;
 }
+
+.frac {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.frac .top {
+  border-bottom: solid #444 1px;
+  display: block;
+  text-align: center;
+}
+
+.frac .bottom {
+  display: block;
+  clear: left;
+  text-align: center;
+}
