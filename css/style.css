@@ -352,3 +352,25 @@ body {
   clear: left;
   text-align: center;
 }
+
+.vector {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vector .arrow {
+  display: block;
+  text-align: center;
+  line-height: 50%;
+}
+
+.vector .unit {
+  display: block;
+  text-align: center;
+  line-height: 0;
+}
+
+.vector .vec {
+  display: block;
+  text-align: center;
+}
