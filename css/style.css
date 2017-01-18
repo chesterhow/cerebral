@@ -22,8 +22,8 @@
 
 @font-face {
     font-family: 'latin_modern_mathregular';
-    src: url('./fonts/latinmodern-math-webfont.woff2') format('woff2'),
-         url('./fonts/latinmodern-math-webfont.woff') format('woff');
+    src: url('./fonts/latinmodern-math.woff2') format('woff2'),
+         url('./fonts/latinmodern-math.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -370,8 +370,8 @@ body {
 .brace {
   display: inline-block;
   letter-spacing: -5px;
-  line-height: 1.25em;
-  padding: 0.8em 5px 0 0;
+  line-height: 0.75em;
+  padding: 0.4em 5px 0 0;
   vertical-align: middle;
 }
 
