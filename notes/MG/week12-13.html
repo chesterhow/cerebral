@@ -1,0 +1,405 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  <title>MG Week 12 &amp; 13</title>
+</head>
+<body>
+  <a href="week1.html">< Week 1</a>
+  <a href="#" class="top-right-link">Week X (WIP) ></a>
+
+  <h6>MG Week 12 - 13</h6>
+
+  <h1>Linear Transformations</h1>
+
+  <h2>Linear Transformations from R<sup>n</sup> to R<sup>m</sup></h2>
+
+  <h3>Conditions for Linear Transformation</h3>
+  <ul>
+    <li>T(0) = 0</li>
+    <li>T(c<b>v</b>) = c T(<b>v</b>)</li>
+    <li>T(<b>u</b> + <b>v</b>) = T(<b>u</b>) + T(<b>v</b>)</li>
+  </ul>
+
+  <p>If any of the conditions are not met, T is not a linear transformation.</p>
+
+  <h2>Composite Functions</h2>
+
+  <p><b>S &deg; T</b> is the composition of S with T</p>
+
+  <p>(S &deg; T)(u) = S(T(u))</p>
+
+  <p><b>T &deg; S</b> is the composition of T with S</p>
+
+  <p>(T &deg; S)(u) = T(S(u))</p>
+
+  <p><b>Note:</b> S &deg; T &ne; T &deg; S</p>
+
+  <h4>Example</h4>
+
+  <p>Let <i>S : R<sup>3</sup> &rarr; R<sup>2</sup></i> be defined by</p>
+  <span>S</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>x</div>
+      <div>y</div>
+      <div>z</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+  <span>=</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>x + y</div>
+      <div>z</div>
+    </div>
+  	<div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <p>Let <i>T : R<sup>2</sup> &rarr; R<sup>3</sup></i> be defined by</p>
+  <span>T</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>x</div>
+      <div>y</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+  <span>=</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>y</div>
+      <div>y</div>
+      <div>x</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+  <p>∴ <i>T &deg; S : R<sup>3</sup> &rarr; R<sup>3</sup></i> is</p>
+
+  <span>(T &deg; S)</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>x</div>
+      <div>y</div>
+      <div>z</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <span>
+    = T
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    S
+  </span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>x</div>
+      <div>y</div>
+      <div>z</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <br>
+
+  <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;= T</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>x + y</div>
+      <div>z</div>
+    </div>
+  	<div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <br>
+
+  <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>z</div>
+      <div>z</div>
+      <div>x + y</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>z</div>
+      <div>z</div>
+      <div>x + y</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+  <span>=</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>0x + 0y + z</div>
+      <div>0x + 0y + z</div>
+      <div>x + y + 0z</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+  <span>=</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>0&emsp;0&emsp;1</div>
+      <div>0&emsp;0&emsp;1</div>
+      <div>1&emsp;1&emsp;0</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>x</div>
+      <div>y</div>
+      <div>z</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <span>∴ <b>Standard Matrix</b> for T &deg; S is</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9130;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>0&emsp;0&emsp;1</div>
+      <div>0&emsp;0&emsp;1</div>
+      <div>1&emsp;1&emsp;0</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9130;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h2>Geometric Linear Transformations</h2>
+  <h3>Scalings in R<sup>2</sup></h3>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>&lambda;<sub>1</sub>&emsp;0</div>
+      <div>0&emsp;&lambda;<sub>2</sub></div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <p>Effect: To scale by a factor of &lambda;<sub>1</sub> along the x-axis, and by a factor of &lambda;<sub>2</sub> along the y-axis</p>
+
+  <h4>Special Case: &lambda;<sub>1</sub> = &lambda;<sub>2</sub> = &lambda;</h4>
+  <p><b>&lambda; > 1</b> &rarr; Effect: A <b>dilation</b> by a factor of &lambda;</p>
+  <p><b>0 < &lambda; < 1</b> &rarr; Effect: A <b>contraction</b> by a factor of &lambda;</p>
+
+  <h3>Reflections in R<sup>2</sup></h3>
+  <h4>Reflection about the x-axis</h4>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>1&emsp;0</div>
+      <div>0&emsp;-1</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h4>Reflection about the y-axis</h4>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>-1&emsp;0</div>
+      <div>0&emsp;1</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h4>Reflection about the line y = x</h4>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>0&emsp;1</div>
+      <div>1&emsp;0</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h4>Reflection about the line y = x tan &theta;</h4>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>cos 2&theta;&emsp;sin 2&theta;</div>
+      <div>sin 2&theta;&emsp;-cos 2&theta;</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h3>Rotations in R<sup>2</sup></h3>
+  <h4>Anti-clockwise rotation through an angle &theta;</h4>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>cos &theta;&emsp;-sin &theta;</div>
+      <div>sin &theta;&emsp;cos &theta;</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h3>Translations</h3>
+
+  <p>Not a linear transformation</p>
+
+  <h3>Shears</h3>
+  <h4>Shear in the x-direction by a factor of k</h4>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>1&emsp;k</div>
+      <div>0&emsp;1</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h4>Shear in the y-direction by a factor of k</h4>
+
+  <span>Standard matrix :</span>
+  <div class="matrix">
+    <div class="brace">
+      <div>&#9127;<br>&#9129;</div>
+    </div>
+    <div class="values">
+      <div>1&emsp;0</div>
+      <div>k&emsp;1</div>
+    </div>
+    <div class="brace">
+      <div>&#9131;<br>&#9133;</div>
+    </div>
+  </div>
+
+  <h3><em>fin</em></h3>
+
+  <a data-scroll href="#">Back to top</a>
+  <script src="../../js/smooth-scroll.min.js"></script>
+  <script>
+    smoothScroll.init({
+  		easing: "easeOutQuad",
+  	});
+  </script>
+</body>
+</html>
