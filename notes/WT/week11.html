@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 11</title>
+	</head>
+<body>
+	<a href="week7.html">< Week 7 - Wireless Security</a>
+	<a href="#" class="top-right-link">Week X (WIP) ></a>
+
+<h6>WT Week 11</h6>
+
+<h1>Wireless PAN I - RFID</h1>
+
+<h2>Personal Area Network (PAN)</h2>
+
+<blockquote>
+<p>Interconnection of computing devices within the range of an individual</p>
+</blockquote>
+
+<h3>PAN?</h3>
+
+<ul>
+	<li>To communicate among personal devices</li>
+	<li>To connect to higher level network or internet</li>
+	<li>Wired with computer buses such as <strong>USB</strong> &amp; <strong>FireWire</strong></li>
+</ul>
+
+<h3>Problems?</h3>
+
+<ul>
+	<li>Different devices require varying types of cables</li>
+	<li>Wires and connector problems
+
+		<ul>
+			<li>Complex wiring</li>
+			<li>Broken, misconnected or defective wires</li>
+		</ul></li>
+</ul>
+
+<h2>Wireless PAN (WPAN)</h2>
+
+<blockquote>
+<p>Low-cost networking scheme that enables computing devices to wirelessly connect with each other over short distances</p>
+</blockquote>
+
+<h3>Features</h3>
+
+<ul>
+	<li>Short range</li>
+	<li>Low power</li>
+	<li>Small in size</li>
+	<li>Low cost</li>
+	<li>Stay connected while moving around</li>
+	<li>Batteries instead of plugs</li>
+</ul>
+
+<h2>Radio Frequency Identification (RFID)</h2>
+
+<blockquote>
+<p>Automatic contact-less identification and data capture using Radio Frequency (RF) signal</p>
+</blockquote>
+
+<ul>
+	<li>Each RFID device holds a small amount of unique data (i.e. serial number)</li>
+	<li>The device can be read from a distance
+
+		<ul>
+			<li>No contact or line-of-sight necessary</li>
+		</ul></li>
+</ul>
+
+<h3>RFID Frequency Range</h3>
+
+<p>RFID uses different frequency ranges (VLF to UHF)</p>
+
+<h4>Very Low Frequency (VLF)</h4>
+
+<ul>
+	<li>30 KHz - 500 KHz</li>
+	<li>Short reading ranges</li>
+	<li>Lower system costs</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<p>-Security access, asset tracking, animal identification etc.</p>
+
+<h4>Ultra High Frequency (UHF)</h4>
+
+<ul>
+	<li>850 MHz - 950 MHz &amp; 2.5 GHz - 2.5 GHz</li>
+	<li>Long reading ranges</li>
+	<li>High reading speeds</li>
+	<li>Higher system costs</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<ul>
+	<li>Supply chain, railroad car tracking, toll collection etc.</li>
+</ul>
+
+<h3>RFID System</h3>
+
+<p>Consists of 3 components</p>
+
+<ul>
+	<li>Tags (Transponder)</li>
+	<li>Reader and antenna (Transceiver)</li>
+	<li>Processing Unit / Back-end server</li>
+</ul>
+
+<h4>How it works</h4>
+
+<ol>
+	<li>Reader (Transceiver) emits RF signal</li>
+	<li>Reader creates electromagnetic field</li>
+	<li>Electromagnetic field induces a current in tag (transponder)</li>
+	<li>Tag generates low-powered wireless response</li>
+	<li>Data captured by reader is sent to server</li>
+</ol>
+
+<h3>RFID Tags</h3>
+
+<p>Each tag has an id code called <strong>EPC</strong> (Electronic Product Code)</p>
+
+<h4>Active Tags</h4>
+
+<ul>
+	<li><strong>Power</strong>: Battery operated</li>
+	<li><strong>Price</strong>: More costly</li>
+	<li><strong>Range</strong>: Long</li>
+	<li><strong>Lifespan</strong>: Long battery life</li>
+</ul>
+
+<h5>How it works</h5>
+
+<p>Continuously broadcasts its own signal</p>
+
+<h5>Usage</h5>
+
+<p>Tracking high-value goods</p>
+
+<h4>Passive Tags</h4>
+
+<ul>
+	<li><strong>Power</strong>: No battery required</li>
+	<li><strong>Price</strong>: Less costly</li>
+	<li><strong>Range</strong>: Short</li>
+	<li><strong>Lifespan</strong>: Extremely long life</li>
+</ul>
+
+<h6>How it works</h6>
+
+<p>Induces energy from RFID reader</p>
+
+<ol>
+	<li>Receive signal from transceiver</li>
+	<li>Power on chip</li>
+	<li>Broadcast info on EPC</li>
+</ol>
+
+<h5>Usage</h5>
+
+<p>Tracking high-volume goods</p>
+
+<h4>Semi-Active Tags</h4>
+
+<ul>
+	<li><strong>Power</strong>: Battery for chip circuitry</li>
+	<li><strong>Price</strong>: More expensive than passive tags</li>
+	<li><strong>Range</strong>: Shorter range than active tags</li>
+</ul>
+
+<h5>How it works</h5>
+
+<p>Chip’s circuitry powered by battery but communicates by drawing power form reader’s RF waves.</p>
+
+<h5>Usage</h5>
+
+<p>Tracking high-valued goods that need to be scanned over long rages</p>
+
+<h3>RFID Reader</h3>
+
+<p>Uses radio waves to read RFID tags</p>
+
+<p><strong>Types</strong></p>
+
+<ul>
+	<li>Stationary</li>
+	<li>Mobile</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+	<li>Volatile chemicals</li>
+	<li>High-value goods that need to be scanned over long ranges</li>
+	<li>Fast-moving goods that are not of great value</li>
+</ul>
+
+<h4>Credit Card Contactless Payment</h4>
+
+<ul>
+	<li>Allow users to wave card over reader at POS</li>
+	<li>Reader sends RF waves to energise the embedded RFID chip in card</li>
+	<li>RFID chip transmits data to reader through its antenna</li>
+	<li>Reader sends info to bank for verification</li>
+	<li>Transaction approved upon verification</li>
+</ul>
+
+<p><strong>Security Concerns</strong></p>
+
+<ul>
+	<li>RFID credit cards may be subject to hacking</li>
+	<li>Hacking device placed near the card could activate signal on RFID chip and receive card details</li>
+	<li>Since payment does not require signature or pin, stolen cards can be easily used to make payments</li>
+	<li>RFID chip can be cloned</li>
+</ul>
+
+<h3>RFID Considerations</h3>
+
+<ul>
+	<li>Cost</li>
+	<li>Privacy (turning off the tag)</li>
+	<li>Multiple data collection</li>
+	<li>RF Interference</li>
+	<li>Anti-collision</li>
+	<li>UHF bounces off metal and gets absorbed by water</li>
+</ul>
+
+<h3>Advantages &amp; Disadvantages</h3>
+
+<p><strong>Advantages</strong></p>
+
+<ul>
+	<li>Low cost</li>
+	<li>Compact size</li>
+	<li>Line-of-sight not required</li>
+</ul>
+
+<p><strong>Disadvantages</strong></p>
+
+<ul>
+	<li>Limited computation power &amp; range</li>
+	<li>Non-standardisation</li>
+	<li>Prone to reader / tag collision</li>
+</ul>
+
+<h3>Barcode vs RFID</h3>
+
+<figure><img src="http://i.imgur.com/RKlaVSO.png" alt="Barcode vs RFID"/><figcaption>Barcode vs RFID</figcaption></figure>
+
+<h3><em>fin</em></h3>
+
+<a data-scroll href="#">Back to top</a>
+<script src="../../js/smooth-scroll.min.js"></script>
+<script>
+  smoothScroll.init({
+		easing: "easeOutQuad",
+	});
+</script>
+</body>
+</html>
