@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 15</title>
+	</head>
+<body>
+	<a href="week11-II.html">< Week 11 - Wireless PAN II</a>
+	<a href="#" class="top-right-link">Week X (WIP) ></a>
+
+<h6>WT Week 15</h6>
+
+<blockquote>
+<p>This set of notes are incomplete. Only Satellite Comms are included. GPS coming soon.</p>
+</blockquote>
+
+<h1>Satellite Communications &amp; GPS</h1>
+
+<p><strong>tldr</strong> - Satellite components, applications and more</p>
+
+<h2>Satellite</h2>
+
+<blockquote>
+<p>An object which orbits or revolves around another object</p>
+</blockquote>
+
+<ul>
+	<li>Man-made satellites orbit Earth</li>
+	<li>Highly specialised wireless receivers / transmitters</li>
+</ul>
+
+<h3>Usage</h3>
+
+<ol>
+	<li>Acquiring scientific data for research</li>
+	<li>Observing Earth from space
+
+		<ul>
+			<li>Weather and mapping</li>
+			<li>Military</li>
+			<li>GPS</li>
+		</ul></li>
+	<li>As reflectors to relay signals across different points on Earth
+
+		<ul>
+			<li>Communication satellites for telephone / data</li>
+			<li>Broadcast satellites for TV</li>
+		</ul></li>
+</ol>
+
+<h3>Satellite Communication Systems</h3>
+
+<ul>
+	<li>Satellites in the sky act as transponders</li>
+	<li><strong>Uplink</strong>: Link from ground station up to satellite</li>
+	<li><strong>Downlink</strong>: Link from satellite down to receiver(s)</li>
+</ul>
+
+<figure><img src="https://www.esoa.net/Resources/operating1.jpeg" alt="Uplink and downlink"/><figcaption>Uplink and downlink</figcaption></figure>
+
+<h4>Types</h4>
+
+<h5>Communications Satellites</h5>
+
+<ul>
+	<li>Telecommunications</li>
+	<li>Acts like relay stations but in space</li>
+	<li>Relays phone calls, TV, internet connections, data etc.</li>
+</ul>
+
+<h5>Remote-Sensing Satellites</h5>
+
+<ul>
+	<li>Studies the Earth’s surface</li>
+	<li>Relatively low height (Low Earth Orbit - LEO)</li>
+	<li>Has powerful cameras to scan planet</li>
+	<li>Has instruments to gather data about environmental things</li>
+	<li>Transmits data on global environment to researchers, governments &amp; businesses</li>
+</ul>
+
+<h5>Global Positioning Systems (GPS)</h5>
+
+<ul>
+	<li>Determine exact latitude, longitude and altitude at any point on Earth</li>
+	<li>Used for navigation</li>
+	<li>Location is determined by “Triangulation Method”
+
+		<ul>
+			<li>Uses radio signals from at least 3 satellites in sight</li>
+		</ul></li>
+</ul>
+
+<h4>Components of a Satellite Communication System</h4>
+
+<p>2 main components: The satellite itself and Earth station</p>
+
+<h5>Earth Stations</h5>
+
+<blockquote>
+<p>Earth-based communications station providing a link to a communications satellite</p>
+</blockquote>
+
+<ul>
+	<li>For communicating (transmission and reception) with satellite(s)</li>
+	<li>A collection of equipment required to communicate via satellite
+
+		<ul>
+			<li>Antenna (Often a dish)</li>
+			<li>Associated equipment (Receiver / decoder, transmitter)</li>
+		</ul></li>
+</ul>
+
+<h3>Components of a Satellite</h3>
+
+<p>2 main components: Payload and Bus</p>
+
+<figure><img src="http://www.energia.ru/english/energia/usp/yamal-200/im/sostav1.jpg" alt="Components of a Satellite"/><figcaption>Components of a Satellite</figcaption></figure>
+
+<h4>Payload</h4>
+
+<ul>
+	<li>All the equipment required by a satellite
+
+		<ul>
+			<li>Antennas, camera, radar and electronics etc.</li>
+		</ul></li>
+	<li>Different for every satellite</li>
+	<li>Contains the <strong>transponder</strong> - a key component for satellite comms
+
+		<ul>
+			<li>Receives signals from transmitting Earth station</li>
+			<li>Filters and translates signals</li>
+			<li>Redirects translated signals to satellite’s transmitting antenna</li>
+		</ul></li>
+</ul>
+
+<h4>Bus</h4>
+
+<ul>
+	<li>Carries the payload and all its equipment into space</li>
+	<li>Physical platform holding the satellite’s parts together</li>
+	<li>Provides electrical power, navigation, control &amp; propulsion to satellite</li>
+	<li>Contains equipment allowing satellite to communicate with Earth (remote control)</li>
+</ul>
+
+<h3>Orbits</h3>
+
+<p>Satellites orbit at different heights</p>
+
+<h4>Low Earth Orbit (LEO)</h4>
+
+<ul>
+	<li><strong>Height</strong>: 160 - 1,400 km</li>
+	<li><strong>Coverage</strong>: Diameter of ~8,000 km</li>
+	<li><strong>Examples</strong>: Satellite phone</li>
+</ul>
+
+<h4>Medium Earth Orbit (MEO)</h4>
+
+<ul>
+	<li><strong>Height</strong>: 10,000 - 15,000 km</li>
+	<li><strong>Coverage</strong>: Diameter of 10,000 - 15,000 km</li>
+	<li><strong>Examples</strong>: Weather, GPS satellites</li>
+</ul>
+
+<h4>Geostationary Earth Orbit (GEO)</h4>
+
+<ul>
+	<li><strong>Height</strong> ~36,000 km</li>
+	<li><strong>Coverage</strong>: Diameter of ~10,000 km</li>
+	<li><strong>Examples</strong>: Television</li>
+</ul>
+
+<h3>Propagation Delay</h3>
+
+<blockquote>
+<p>Amount of time taken for signal to travel from sender to receiver</p>
+</blockquote>
+
+<p><strong>Example</strong></p>
+
+<p>Assuming distance from ground level to satellite is 36,000 km. For direct transmission,</p>
+
+<p>Propagation time</p>
+
+<p>= 36,000,000 m / speed of light</p>
+
+<p>= 36,000,000 m / 300,000,000 m/s</p>
+
+<p>= 0.12 seconds (1 way)</p>
+
+<h3>Footprint</h3>
+
+<blockquote>
+<p>Ground area where the satellite’s transponders offer coverage</p>
+</blockquote>
+
+<h4>Footprint Maps</h4>
+
+<blockquote>
+<p>Shows the estimated minimal satellite dish diameter required or signal strength in each area</p>
+</blockquote>
+
+<ul>
+	<li>Measured in dBW</li>
+</ul>
+
+<h4>Footprint Coverage</h4>
+
+<ul>
+	<li><strong>Global</strong>: Covers largest possible portion of the Earth that can be viewed from the satellite</li>
+	<li><strong>Regional</strong>: Covers certain areas (e.g. a continent)</li>
+	<li><strong>Spot Beam</strong>: Covers a small area</li>
+</ul>
+
+<h3>Frequency Bands</h3>
+
+<p>Satellite communications mostly use C-, Ku- and Ka- bands (GHz)</p>
+
+<figure><img src="http://i.imgur.com/SKCAfjl.png" alt="Comparison between bands"/><figcaption>Comparison between bands</figcaption></figure>
+
+<h3>Applications</h3>
+
+<h4>Trunk Telephony</h4>
+
+<ul>
+	<li>Used by telephone operators</li>
+	<li>Carry out long-distance telephone communications
+
+		<ul>
+			<li>Intercontinental</li>
+			<li>Complement / bypass submarine cables</li>
+		</ul></li>
+	<li>Low density areas where satellite can connect to local telephone exchange</li>
+</ul>
+
+<h4>Mobile Satellite Telephony</h4>
+
+<ul>
+	<li>To make telephone calls from wherever user is located</li>
+	<li>Lacks coverage over sparsely populated / uninhabited places</li>
+	<li>Types of Satellites used
+
+		<ul>
+			<li>LEO-based Globalstar/ Iridium</li>
+			<li>MEO-based Inmarsat</li>
+			<li>GEO-based Thuraya</li>
+		</ul></li>
+</ul>
+
+<h4>Data, Broadband and Multimedia Services</h4>
+
+<ul>
+	<li>Transfer of data over satellite networks
+
+		<ul>
+			<li>Data collection / broadcasting</li>
+			<li>Image &amp; video transfer</li>
+			<li>Voice</li>
+			<li>2-way computer transactions &amp; data inquiries</li>
+		</ul></li>
+	<li>Integrates IP-based satellite communication systems seamlessly to Internet</li>
+</ul>
+
+<h5>End-user services for Small Office and Home (SOHO)</h5>
+
+<ul>
+	<li>Satellite broadband connectivity provides internet access</li>
+	<li>Able to reach everywhere, even places with poorly developed infrastructure</li>
+	<li>Subscriber request routed through land-based line</li>
+	<li>Download data routed via satellite directly to Earth station</li>
+</ul>
+
+<figure><img src="http://i.imgur.com/RaaDAGU.png" alt="One-way Internet Service"/><figcaption>One-way Internet Service</figcaption></figure>
+
+<figure><img src="http://i.imgur.com/2ctGqx4.png" alt="Two-way Internet Service"/><figcaption>Two-way Internet Service</figcaption></figure>
+
+<h4>Broadband Global Area Network (BGAN)</h4>
+
+<blockquote>
+<p>A portable satellite Earth station the size of a laptop</p>
+</blockquote>
+
+<ul>
+	<li>Placed at desired location to receive &amp; transmit signals from &amp; to the Inmarsat satellites orbiting Earth</li>
+	<li>Satellites relay data signal from BGAN to an Earth station with connectivity to Internet Service Provider</li>
+	<li>Users at location can access the Internet via devices wirelessly connected to the BGAN</li>
+</ul>
+
+<h4>Global Navigation Satellite System-based Electronic Road Pricing</h4>
+
+<p>a.k.a. GNSS-based ERP</p>
+
+<p><strong>Functions</strong></p>
+
+<ul>
+	<li>Conduct &amp; enforce congestion charging, including distance-based charging</li>
+	<li>Collect &amp; disseminate traffic data</li>
+	<li>Provide other value-added services such as electronic road-side parking</li>
+</ul>
+
+<h5>Gantry-based ERP</h5>
+
+<ul>
+	<li>Currently in-use</li>
+	<li>Annual operating costs risen by 80% over the last decade</li>
+	<li>Large part of system coming to end of life-cycle</li>
+	<li>Physical gantries take up land</li>
+</ul>
+
+<h5>Advantages of GNSS-based ERP</h5>
+
+<ul>
+	<li>Distance-based pricing along congested roads
+
+		<ul>
+			<li>Motorists charged according to distance travelled</li>
+		</ul></li>
+	<li>Allows every vehicle to become a sensor for LTA to develop a better, real-time picture of the traffic situation</li>
+	<li>Same data can be broadcasted to motorists to help them better plan their journeys and avoid congested roads</li>
+</ul>
+
+<h3><em>fin</em></h3>
+
+<a data-scroll href="#">Back to top</a>
+<script src="../../js/smooth-scroll.min.js"></script>
+<script>
+  smoothScroll.init({
+		easing: "easeOutQuad",
+	});
+</script>
+</body>
+</html>
