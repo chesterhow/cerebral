@@ -1,332 +1,349 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	<title>WT Week 13</title>
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<title>WT Week 13</title>
+	</head>
 <body>
-<a href="week11-II.html">< Week 11 - Wireless PAN II</a>
-<a href="week15.html" class="top-right-link">Week 15 - Satellite Communications &amp; GPS ></a>
+	<a href="week11-II.html">< Week 11 - Wireless PAN II</a>
+	<a href="week15.html" class="top-right-link">Week 15 - Satellite Communications &amp; GPS ></a>
 
-<h1>WT Week 13 </h1>
+<h6>WT Week 13</h6>
 
 <h1>Cellular Network Technology I</h1>
 
-<p><strong>tldr</strong> - The cellular concept, the architecture of the GSM networks, the GSM network layer, and GSM radio link/interface</p>
+<p><strong>tldr</strong> - Cellular concept, GSM network architecture, GSM network layer and GSM radio link</p>
 
-<h2>Cell Phones</h2>
-
-<h3>Communication</h3>
-
-<blockquote>
-<p>Cellphone network uses cell towers (antenna) via a switching office to communicate via radio waves</p>
-</blockquote>
-
-<h4>Transmission</h4>
+<h2>Cellular Phone</h2>
 
 <ul>
-	<li>For transmission using radio waves, a frequency channel is used</li>
-	<li>As a cell phone is a duplex device, it can transmit and receive at the same time. Hence 2 channels are required for each phone</li>
-	<li>Disadvantage of having 1 cell tower in a whole city
-
-		<ul>
-			<li>Not enough channels to support many users</li>
-			<li>Each cell phone must have a powerful transmitter and receiver in order to reach the cell tower (more power consumption)</li>
-		</ul></li>
+	<li>Frequency channels used for radio wave transmission</li>
+	<li>Duplex device (has 2 channels to transmit and receive simultaneously)</li>
 </ul>
 
-<h3>Cell Concept</h3>
-
-<blockquote>
-<p>To overcome the limitation of 1 large central antenna, cell concept is used</p>
-</blockquote>
+<p><strong>Comparison</strong></p>
 
 <ul>
-	<li>A geographical area is divided into small areas called cells</li>
+	<li>LAN: Switch used to interconnect PCs</li>
+	<li>Cell phone network: Cell tower via a switching office used</li>
+</ul>
+
+<h3>Pop Quiz</h3>
+
+<p><strong>Question</strong> - If a telco has 700 channels, how many users can make use of the cell phone service at the same time?</p>
+
+<p><strong>Answer</strong> - Each user requires 2 channels ∴ max users = 700 / 2 = 350</p>
+
+<h3>Problem - 1 cell tower for whole city</h3>
+
+<ul>
+	<li>Not enough channels to support more users</li>
+	<li>Cell phones require powerful antennas to reach the cell tower</li>
+</ul>
+
+<h3>Solution - Cell Concept</h3>
+
+<ul>
+	<li>Divide city into small cells (hexagons)</li>
 	<li>Cells can be sized at about 2 x 2 square miles</li>
-	<li>Cells are shown as hexagons on a hexagonal grid</li>
+	<li>Each cell has <strong>base station</strong> (antenna tower and building containing radio equipment)</li>
+	<li>Base station uses low-power transmitter</li>
 </ul>
 
-<h4>Low Power Transmitter </h4>
-
-<blockquote>
-<p>Each cell has a base station that consists of an antenna tower and a small building containing the radio equipment. The base station uses a low power transmitter</p>
-</blockquote>
+<h4>Benefits of Low-power Transmitters</h4>
 
 <ul>
-	<li>Low power transmitter has 2 advantages:
-
-		<ol>
-			<li>Battery Life
-
-				<ul>
-					<li>Reduces power consumption of a cell phone, which is normally battery operated. Low power means small batteries.</li>
-				</ul></li>
-			<li>Frequency Re-use
-
-				<ul>
-					<li>Transmissions between a base station and phones with its cell do not make it very far outside the cell. Non-adjacent cells can use the same set of frequencies without interference, and can be reuse across a big area. This reduces the number of frequencies to support all users.</li>
-				</ul></li>
-		</ol></li>
-</ul>
-
-<figure><img src="http://i.imgur.com/1015FV2.png"/></figure>
-
-<h4>Base Station</h4>
-
-<blockquote>
-<p>A base station manages, sends, and receives traffic from mobile phones within the geographical area to a distant cellular telephone switch called a Mobile Telecommunications Switching Office (MTSO)</p>
-</blockquote>
-
-<ul>
-	<li>MTSO
+	<li>Allows cellular phones to have longer battery lives</li>
+	<li>Allows frequency re-use
 
 		<ul>
-			<li>Authenticates wireless customers before establishing connection</li>
-			<li>Places calls from land-based telephones to wireless customers</li>
-			<li>Switches calls between cells as mobile travel across cell boundaries </li>
-		</ul></li>
+			<li>Transmissions from base station do not travel very far outside its cell</li>
+			<li>Hence, non-adjacent cells can use same set of frequencies without interference</li>
+			<li>By using the same set of frequencies extensively across a big area, it reduces the number of frequencies required to support all users</li>
+		</ul>
+
+		<figure><img src="http://i.imgur.com/lmMRF0w.png" alt="Frequency Re-use"/><figcaption>Frequency Re-use</figcaption></figure></li>
+</ul>
+
+<h3>Base Station</h3>
+
+<blockquote>
+<p>Manages, sends and receives traffic from all mobiles in its geographical area to a distant cellular telephone switch called Mobile Telecommunications Switching Office (MTSO)</p>
+</blockquote>
+
+<h3>Mobile Telecommunications Switching Office (MTSO)</h3>
+
+<ul>
+	<li>Authenticates wireless customers before establishing connection</li>
+	<li>Places calls from land-based telephones to wireless customers</li>
+	<li>Switches calls between cells as mobiles travel across boundaries</li>
 </ul>
 
 <h3>Cellular Phone Technologies</h3>
 
-<p>Widely used cellular technologies are:</p>
+<ul>
+	<li>Global System for Mobile Communications (GSM)</li>
+	<li>Code Division Multiple Access (CDMA)</li>
+	<li>Time Division Multiple Access (TDMA)
 
-<h4>CDMA (Code Division Multiple Access)</h4>
+		<ul>
+			<li>Analog and inefficient. Also obsolete</li>
+		</ul></li>
+	<li>Global System for Mobile Communications (GSM)
 
-<h4>TDMA (Time Division Multiple Access)</h4>
+		<ul>
+			<li>Adopted by Singapore</li>
+		</ul></li>
+</ul>
 
-<blockquote>
-<p>Analog and inefficient. Also obsolete</p>
-</blockquote>
-
-<h4>GSM (Global System for Mobile Communications)</h4>
-
-<blockquote>
-<p>Adopted by Singapore</p>
-</blockquote>
-
-<h5>GSM Networks</h5>
+<h2>Global System for Mobile Communications (GSM)</h2>
 
 <figure><img src="http://i.imgur.com/8m9ayWa.png" alt="Types of GSM Networks"/><figcaption>Types of GSM Networks</figcaption></figure>
 
 <h3>GSM Network Architecture</h3>
 
-<figure><img src="http://i.imgur.com/zeuZM2x.png" alt="GSM Network Architecture"/><figcaption>GSM Network Architecture</figcaption></figure>
+<ul>
+	<li>Consists of 3 main subsystems</li>
+</ul>
 
-<p><strong>Mobile Station</strong></p>
+<figure><img src="http://i.imgur.com/P0mwsox.png" alt="3 main subsystems"/><figcaption>3 main subsystems</figcaption></figure>
 
-<ol>
-	<li>Mobile Equipment (ME)
+<h4>Mobile Station (MS)</h4>
 
-		<ul>
-			<li>Identified internally by IMEI (International Mobile Equipment Identity), which is allocated by equipment manufacturer</li>
-			<li>IMEI is registered into Equipment Identity Register (EIR) by the network operator (telco)</li>
-			<li>Example: Handphones</li>
-		</ul></li>
-	<li>Subscriber Identity Module (SIM)
+<h5>Mobile Equipment (ME)</h5>
 
-		<ul>
-			<li>Contains IMSI (International Mobile Subscriber Identity) that identifies a user on a network.</li>
-			<li>IMSI contains Mobile Country Code (MCC), Mobile Network Code (MNC) and Mobile Subscriber Identity Number (MSIN)</li>
-		</ul></li>
-</ol>
-
-<p><strong>Base Station Subsystem</strong></p>
-
-<ol>
-	<li>Base Transceiver Station (BTS) or Base Station
+<ul>
+	<li>Identified internal by <strong>IMEI</strong> (International Mobile Equipment Identity)
 
 		<ul>
-			<li>Helps define a cell’s boundary, and responsible for the radio link protocol with the Mobile Station</li>
-			<li>Transmit and receives signal to/from mobile users using different frequencies</li>
-			<li>Found on elevated location such as towers, poles, water tanks or roof-tops</li>
-			<li>Has a frequency band that provides multiple channels</li>
+			<li>IMEI is allocated by equipment manufacturer</li>
+			<li>IMEI is registered into <strong>EIR</strong> (Equipment Identity Register) by the telco</li>
 		</ul></li>
-	<li>Base Station Controller (BSC)
+	<li>Example: Mobile Phones</li>
+</ul>
+
+<h5>Subscriber Identity Module (SIM)</h5>
+
+<ul>
+	<li>Contains <strong>IMSI</strong> (International Mobile Subscriber Identity)
 
 		<ul>
-			<li>Controls multiple BTSs</li>
-			<li>Manages radio channel setups and hangovers</li>
-			<li>BSC connects the Mobile Station and the Mobile Switching Centre (MSC)</li>
+			<li>IMSI identifies a user on a network</li>
+			<li>IMSI = Mobile Country Code (MCC) + Mobile Network Code (MNC) + Mobile Subscriber Identity Number (MSIN)</li>
 		</ul></li>
-</ol>
+</ul>
 
-<p><strong>Network Switching Subsystem</strong></p>
+<h4>Base Station Subsystem (BSS)</h4>
 
-<ol>
-	<li>Mobile Switching Centre
-
-		<blockquote>
-		<p>Also known as Mobile Telephone Switching Office (MTSO)</p>
-		</blockquote>
-
-		<ul>
-			<li>Handles a few BSCs</li>
-			<li>Manages location of mobiles</li>
-			<li>Manages setup of calls to/from mobile station</li>
-			<li>Manages security</li>
-			<li>Collects call billing data and sends to billing system</li>
-			<li>Collects traffic statistics for performance monitoring</li>
-		</ul></li>
-	<li>Home Location Register (HLR)
-
-		<blockquote>
-		<p>Stores location about each subscriber that belongs to the MSC</p>
-		</blockquote></li>
-	<li>Visitor Location Register (VLR)
-
-		<blockquote>
-		<p>Maintains information about subscribers currently physically in the region</p>
-		</blockquote></li>
-	<li>Authentication Centre (AuC)
-
-		<blockquote>
-		<p>Databases used for handling authentication and encryption keys</p>
-		</blockquote></li>
-	<li>Equipment Identity Register (EIR)
-
-		<blockquote>
-		<p>A list of all valid mobile equipments (ME) on the network by keeping all valid IMEI in used</p>
-		</blockquote></li>
-</ol>
-
-<h3>GSM Signalling Protocols</h3>
+<h5>Base Transceiver Station (BTS)</h5>
 
 <blockquote>
-<p>GSM components talk to each other using signal-based protocols</p>
+<p>a.k.a. Base Station</p>
 </blockquote>
 
 <ul>
-	<li>Signalling Protocols involve 3 layers
+	<li>Defines a cell’s boundary</li>
+	<li>Responsible for radio link protocols with MS</li>
+	<li>Transmits and receives signals from mobile users using different frequencies</li>
+	<li>Found on elevated locations (e.g. Towers, poles, water tanks, rooftops)</li>
+	<li>Has a multi-channel frequency band</li>
+</ul>
+
+<h5>Base Station Controllers (BSC)</h5>
+
+<ul>
+	<li>Controls multiple BTSs</li>
+	<li>Manages radio channel setups and handovers</li>
+	<li>Connects MS to MSC</li>
+</ul>
+
+<h4>Network Switching Subsystem (NSS)</h4>
+
+<h5>Mobile Switching Centre (MSC)</h5>
+
+<blockquote>
+<p>a.k.a. Mobile Telephone Switching Office (MTSO)</p>
+</blockquote>
+
+<ul>
+	<li>Handles multiple BSCs</li>
+	<li>Manages locations of mobiles</li>
+	<li>Manages setup of calls to / from MSs</li>
+	<li>Manages security</li>
+	<li>Collects call billing data and sends to billing system</li>
+	<li>Collects traffic stats for performance monitoring</li>
+</ul>
+
+<h5>Home Location Register (HLR)</h5>
+
+<ul>
+	<li>Stores info about each subscriber belonging to the MSC</li>
+</ul>
+
+<h5>Visitor Location Register (VLR)</h5>
+
+<ul>
+	<li>Maintains info about subscribers currently physically in the region</li>
+</ul>
+
+<h5>Authentication Center (AuC)</h5>
+
+<ul>
+	<li>Databases used for handling authentication and encryption keys</li>
+</ul>
+
+<h5>Equipment Identity Register (EIR)</h5>
+
+<ul>
+	<li>A list of all valid MEs in the network by keeping all valid IMEIs in use</li>
+</ul>
+
+<h3>GSM Signalling Protocols</h3>
+
+<ul>
+	<li>GSM components talk to each other using signal-based protocols</li>
+	<li>3 layers
 
 		<ul>
 			<li>Layer 1: Physical Layer</li>
 			<li>Layer 2: Data Link Layer</li>
 			<li>Layer 3: Network Layer</li>
 		</ul></li>
+	<li>Layer 3 is divided into Connection, Mobility and Radio Resource</li>
 </ul>
-
-<p>The Network Layer (Layer 3) is divided into 3 functionalities:</p>
 
 <h4>Radio Resource Management (RRM)</h4>
 
 <blockquote>
-<p>Manage call control, supplementary service and short message services (SMS). E.g. establishes incoming call connection</p>
+<p>Manages the switching of an ongoing call to a different cell / channel</p>
 </blockquote>
 
 <ul>
-	<li>Involves 3 functional components
+	<li>Components involved
 
-		<ol>
-			<li>Mobile Station (MS)</li>
-			<li>Base Station Subsystem (BSS)</li>
-			<li>Mobile Switching Centre (MSC)</li>
-		</ol></li>
-	<li>A major aspect of RRM is handover or handoff
-
-		<blockquote>
-		<p>The switching of an ongoing call to a different channel or cell</p>
-		</blockquote></li>
+		<ul>
+			<li>MS</li>
+			<li>BSS</li>
+			<li>MSC</li>
+		</ul></li>
+	<li>2 types of handover - internal and external</li>
 </ul>
 
-<p>Types of handover:</p>
+<h5>Internal Handover (Handled by BSC)</h5>
 
-<h5>Internal handover (handled by BSC)</h5>
-
-<p><strong>Intra-cell handover</strong></p>
+<h6>Intra-cell Handover</h6>
 
 <blockquote>
 <p>Transferring call connection to another channel on the same BTS</p>
 </blockquote>
 
-<figure><img src="http://i.imgur.com/FQ90aCh.png" alt="Intra-cell Handover"/><figcaption>Intra-cell Handover</figcaption></figure>
+<ul>
+	<li>Switch channel</li>
+	<li>Same BTS</li>
+</ul>
 
-<p><strong>Intern inter-cell handover</strong></p>
+<figure><img src="http://i.imgur.com/iTpoQ1f.png" alt="Intra-cell Handover"/><figcaption>Intra-cell Handover</figcaption></figure>
+
+<h6>Intern Intra-cell Handover</h6>
 
 <blockquote>
 <p>Transferring call connection to another BTS on the same BSC</p>
 </blockquote>
 
-<figure><img src="http://i.imgur.com/ou8AIeB.png" alt="Intern Inter-cell Handover"/><figcaption>Intern Inter-cell Handover</figcaption></figure>
+<ul>
+	<li>Switch BTS</li>
+	<li>Same BSC </li>
+</ul>
 
-<h5>External handover (handled by MSC)</h5>
+<figure><img src="http://i.imgur.com/y3dhVIC.png" alt="Intern Intra-cell Handover"/><figcaption>Intern Intra-cell Handover</figcaption></figure>
 
-<p><strong>MSC intern handover</strong></p>
+<h5>External Handover (Handled by MSC)</h5>
+
+<h6>MSC Intern Handover</h6>
 
 <blockquote>
-<p>Transferring call connection between BTSs of different BSCs on the same MSC<br/><img src="http://i.imgur.com/mF0pbEX.png" alt="MSC Intern Handover"/></p>
+<p>Transferring call connection between BTSs of different BSCs on the same MSC</p>
 </blockquote>
 
-<p><strong>MSC extern handover</strong></p>
+<ul>
+	<li>Switch BTS</li>
+	<li>Different BSC</li>
+	<li>Same MSC</li>
+</ul>
+
+<figure><img src="http://i.imgur.com/jVSmMfP.png" alt="MSC Intern Handover"/><figcaption>MSC Intern Handover</figcaption></figure>
+
+<h6>MSC Extern Handover</h6>
 
 <blockquote>
-<p>Transferring call connection to another BTS under the control of different MSC<br/><img src="http://i.imgur.com/H4SZM23.png" alt="MSC Extern Handover"/></p>
+<p>Transferring call connection to another BTS under the control of a different MSC</p>
 </blockquote>
+
+<ul>
+	<li>Switch BTS</li>
+	<li>Different BSC</li>
+	<li>Different MSC</li>
+</ul>
+
+<figure><img src="http://i.imgur.com/S7Vwqui.png" alt="MSC Extern Handover"/><figcaption>MSC Extern Handover</figcaption></figure>
 
 <h4>Mobility Management (MM)</h4>
 
-<ul>
-	<li>Handles the following issues
-
-		<ul>
-			<li>Location Management and other mobility issues</li>
-			<li>Authentication and other security issues</li>
-		</ul></li>
-	<li>Main function is to facilitate location updating
-
-		<blockquote>
-		<p>When there is an incoming call for a mobile station (MS1), the network needs to be aware of the location of MS1 so as to transfer the call to the proper cell</p>
-		</blockquote></li>
-	<li>Location updating involve 3 components
-
-		<ol>
-			<li>Home Location Register (HLR)</li>
-			<li>Visitor Location Register (VLR)</li>
-			<li>Mobile Switching Centre (MSC)</li>
-		</ol></li>
-</ul>
-
-<h5>How MM works:</h5>
-
-<ol>
-	<li>In GSM, cells are group into location areas (LA)</li>
-	<li>When a Mobile Station (MS) crosses from one LA to another, it sends location updating messages to the MSC and VLR of the new LA</li>
-	<li>The new VR records the location information of the MS</li>
-	<li>Location Information is sent to the HLR from the new VLR</li>
-	<li>The HLR sends a subset of the subscriber’s information to the new VLR required for call control</li>
-	<li>The HLR informs the previous MSC/VLR to cancel registration of the MS</li>
-</ol>
-
-<h4>Connection Management (CM) - Optional</h4>
-
 <blockquote>
-<p>Overseas link between mobile and MSC. E.g. manages handovers</p>
+<p>Facilitate location updating</p>
 </blockquote>
 
-<h3>Radio Link/ Air Interface</h3>
+<ul>
+	<li>Network needs to be aware of location of MS is order to transfer calls to the proper cells</li>
+	<li>Handles
+
+		<ul>
+			<li>Location management &amp; other mobility issues</li>
+			<li>Authentication &amp; other security issues</li>
+		</ul></li>
+	<li>Components involved
+
+		<ul>
+			<li>HLR</li>
+			<li>VLR</li>
+			<li>MSC</li>
+		</ul></li>
+</ul>
+
+<h5>How it works</h5>
+
+<ol>
+	<li>Cells are grouped into location areas (LA)</li>
+	<li>When a MS crosses from one LA to another, it sends location updating messages to MSC and VLR of new LA</li>
+	<li>New VLR records the location of MS</li>
+	<li>Location info is sent to HLR from new VLR</li>
+	<li>HLR sends subset of subscriber’s info to new VLR required for call control</li>
+	<li>HLR informs previous MSC / VLR to cancel registration of the MS</li>
+</ol>
+
+<h3>Radio Link / Air Interface</h3>
 
 <ul>
-	<li>2 Frequency Bands are used:
+	<li>2 frequency bands used
 
-		<ol>
-			<li>Uplink Transmission (MS to BS)</li>
-			<li>Downlink Transmission (BS to MS)</li>
-		</ol></li>
-	<li>In GSM-900, a frequency band of 25MHz are allocated to each links
+		<ul>
+			<li>Uplink (MS to BS)</li>
+			<li>Downlink (BS to MS)</li>
+		</ul></li>
+	<li>In GSM-900, both links use 25 MHz frequency bands
 
-		<ol>
-			<li>Uplink (890 - 915 MHz)</li>
-			<li>Downlink (935 - 960 MHz)</li>
-		</ol></li>
-	<li>GSM uses a combination of FDMA and TDMA</li>
-	<li>Each 25MHz bands are divided into 124 frequency sub-bands (124 channels) using <em>FDMA</em></li>
-	<li>Each channels is allocated a 200kHz carrier spacing</li>
-	<li>The 2 frequency bands give a total of 248 channels (2 * 124)</li>
-	<li>248 channels, combined with an 8-slot <em>TDMA</em> scheme, gives a total of 1984 logical channels</li>
-	<li>If there is a cluster of 7 cells sharing the logical channels, each cells in the cluster would use 283 channels</li>
+		<ul>
+			<li>Uplink: 890 - 915 MHz</li>
+			<li>Downlink: 935 - 960 MHz</li>
+		</ul></li>
+	<li>GSM uses a combination of FDMA &amp; TDMA</li>
+	<li>Each 25 MHz band divided into 124 frequency sub-bands using FDMA</li>
+	<li>Each channel allocated 200 kHz carrier spacing</li>
+	<li>Total channels of both frequency bands = 248 channels</li>
+	<li>Combined with an 8 time-slot TDMA scheme, total logical channels = 1984</li>
+	<li>If there is a cluster of 7 cells sharing 1984 logical channels, each cell would use 283 channels</li>
 </ul>
 
 <h3><em>fin</em></h3>
