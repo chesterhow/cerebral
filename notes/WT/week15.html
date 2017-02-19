@@ -12,10 +12,6 @@
 
 <h6>WT Week 15</h6>
 
-<blockquote>
-<p>This set of notes are incomplete. Only Satellite Comms are included. GPS coming soon.</p>
-</blockquote>
-
 <h1>Satellite Communications &amp; GPS</h1>
 
 <p><strong>tldr</strong> - Satellite components, applications and more</p>
@@ -321,6 +317,208 @@
 	<li>Allows every vehicle to become a sensor for LTA to develop a better, real-time picture of the traffic situation</li>
 	<li>Same data can be broadcasted to motorists to help them better plan their journeys and avoid congested roads</li>
 </ul>
+
+<h2>GPS</h2>
+
+<p>a.k.a. Global Positioning System</p>
+
+<h3>Details</h3>
+
+<ul>
+	<li>A worldwide radio-navigational system formed from a constellation of 24 (this number is dynamic) or more satellites and their ground station</li>
+	<li>These satellites circulate in 6 orbital planes, with 4 satellites in each plane</li>
+	<li>These constellation of satellites provides the user (or GPS receiver) with 5 to 8 reachable satellites from any point on the Earth at any one time</li>
+	<li>GPS uses ‘man-made stars’ as reference points to calculate its position accurately (to the closest meters)</li>
+</ul>
+
+<h3>Why</h3>
+
+<ul>
+	<li>Originated from US DOD as a mean to get the exact location of a missile’s launch (often from sea) and the exact enemy’s location</li>
+	<li>After the Cold War, GPS has been commercialised for use in navigational systems</li>
+</ul>
+
+<h3>How it works</h3>
+
+<blockquote>
+<p>The Basis of GPS is <em>“triangulation”</em> from satellites</p>
+</blockquote>
+
+<ul>
+	<li>To locate the position of the receiver, 2 methods can be used:</li>
+</ul>
+
+<p> <strong>2D Triangulation</strong></p>
+
+<blockquote>
+<p>Exact Position of an object can be identified if its distances from 3 other positions are known</p>
+</blockquote>
+
+<ul>
+	<li>Steps:
+
+		<ol>
+			<li>Find the relative position of receiver with reference to Satellites 1, 2 and 3 using the triangulation method</li>
+			<li>To use the triangulation method, need to measure the distance from each satellite to the receiver, d1, d2, d3</li>
+			<li>To measure d1, d2, d3 the formula shown below is used:<br/><img src="http://i.imgur.com/zdNRQiE.png" alt="Distance Formula"/></li>
+			<li>The GPS receiver measures distance using the travel time of the radio waves</li>
+			<li>To get absolute position of the receiver, an “almanac” which tells the receiver the exact position of the satellites, is required</li>
+		</ol></li>
+</ul>
+
+<p><strong>3D Triangulation</strong></p>
+
+<blockquote>
+<p>Satellites that are tracking a receiver are in orbits of the Earth </p>
+</blockquote>
+
+<ul>
+	<li>Instead of a series of circles (2D), a series of spheres is used, because the radii from the 3 satellites go off in all directions</li>
+	<li>Steps:
+
+		<ol>
+			<li>If the GPS receiver knows it’s 10km from satellite A in the sky, it could be anywhere on the surface of a huge imaginary sphere within a 10km radius</li>
+			<li>If it knows it is 15km from satellite B, it can overlap the first 10km sphere with another larger 15km sphere. The spheres interest to form a perfect circle<br/><img src="http://i.imgur.com/y9nw82D.png" alt="2 Spheres intersecting"/></li>
+			<li>If it knows the distance of a third satellite, we get a third sphere which intersects the circle at two points</li>
+			<li>The Earth acts as the fourth sphere. As a result, only one of the two points will be on the surface of the planet, and we can eliminate the point in space. Hence only 3 satellites are sufficient for calculation</li>
+		</ol></li>
+	<li>Distance from satellite to receiver can be measured using the formula:<br/><img src="http://i.imgur.com/zdNRQiE.png"/></li>
+	<li>To measure travel time, GPS needs to have a very accurate timing</li>
+	<li>Provisions have to be made for delays as signals travel through the atmosphere in all kinds of weather conditions</li>
+	<li>As GPS satellites circle our planet, they all ‘sing’ two endless ‘songs’ in unison</li>
+	<li>These ‘songs’ are loops of code and data called L1 and L2
+
+		<ul>
+			<li>Beam in all directions over the 1.57542 GHz frequency</li>
+			<li>Beam through a low power, 50 watt radio transmitter</li>
+			<li>Audiences are tens of millions of GPS receivers
+
+				<ul>
+					<li>Phones</li>
+					<li>Cars</li>
+					<li>Watches</li>
+				</ul></li>
+		</ul></li>
+</ul>
+
+<h4>Optional Information</h4>
+
+<ul>
+	<li>Each radio transmission has 3 pieces of information:</li>
+</ul>
+
+<ol>
+	<li>Pseudorandom Number
+
+		<ul>
+			<li>A pseudorandom code identifies which satellites are transmitting</li>
+			<li>The satellites’ PRN from 1 through 32 is displayed on the receiver to indicate which satellites are detected</li>
+		</ul></li>
+	<li>Ephemeris Data
+
+		<ul>
+			<li>Satellites’ ephemeris data keeps ground stations posted on:
+
+				<ul>
+					<li>health of the satellite</li>
+					<li>current time and date (maintained by onboard atomic clocks)</li>
+				</ul></li>
+		</ul></li>
+	<li>Almanac Data
+
+		<ul>
+			<li>Almanac data tells GPS receivers the locations of all the GPS satellites at any time throughout the day</li>
+		</ul></li>
+</ol>
+
+<ul>
+	<li>Older GPS receivers have a single channel
+
+		<ul>
+			<li>Channel have to be divide its time rotating among satellites, picking up signals from each</li>
+		</ul></li>
+	<li>New GPS receivers have a parallel, multichannel design
+
+		<ul>
+			<li>Between 5 - 12 receiver circuits</li>
+			<li>Each locked onto a particular satellite</li>
+			<li>All of them operates at the same time</li>
+		</ul></li>
+	<li>When a receiver circuit detects a satellite’s broadcast, the GPS device&nbsp;uses the ephemeris and almanac data to set its own clock and save the data for use when called upon to calculate its own position</li>
+	<li>When the unit’s receiver locked onto at least 4 satellites, the receiver can begin navigating through the process of trilateration</li>
+</ul>
+
+<h4> To find a GPS satellite</h4>
+
+<ul>
+	<li>We need to know where the GPS satellites so we can use them as reference points</li>
+	<li>The US airforce injects each GPS satellites into a precise orbit, according to the GPS master plan</li>
+	<li>On the ground, all GPS receivers will receive almanac data that that tell them where each satellite is, moment by moment</li>
+	<li>GPS satellites constantly monitored by Department of Defence (DoD). Precise radar is used to check each satellites’ exact altitude, position and speed</li>
+</ul>
+
+<h4>Key Features of GPS Applications</h4>
+
+<h5>Location</h5>
+
+<blockquote>
+<p>System must be able to locate the source and target object accurately at any point under any kind of weather conditions</p>
+</blockquote>
+
+<h5>Navigation</h5>
+
+<blockquote>
+<p>This process guide the source object to reach the destination or target (E.g. a vehicle weather conditions)</p>
+</blockquote>
+
+<h5>Tracking</h5>
+
+<blockquote>
+<p>This process of monitoring the movement of the object as it moves from its origin to its target</p>
+</blockquote>
+
+<h5>Maps</h5>
+
+<blockquote>
+<p>To aid navigation, maps should be built and loaded into the GPS (e.g. vehicle navigation system)</p>
+</blockquote>
+
+<h5>Timing</h5>
+
+<blockquote>
+<p>The system should be able to determine how long it takes for object to reach its destination</p>
+</blockquote>
+
+<h4>GPS Application Examples</h4>
+
+<ul>
+	<li>Geo-information for airplane passengers
+
+		<ul>
+			<li>How far the plane has travelled from the starting point (odometer)</li>
+			<li>How long the plane has been travelling</li>
+			<li>The current speed of the plane (speedometer)</li>
+			<li>Average speed of plane</li>
+			<li>A ‘bread-crumb’ trail of the map showing the passengers exactly where the plane has travelled</li>
+			<li>Estimate time of arrival at the destination if the plane maintains the current speed</li>
+		</ul></li>
+</ul>
+
+<h4>Pop Quiz!</h4>
+
+<p>A GPS receiver receives signals from three satellites A, B and C. Location and horizontal distance of the satellites are:</p>
+
+<figure><img src="http://i.imgur.com/P6SkfPm.png" alt="Satellite Table"/><figcaption>Satellite Table</figcaption></figure>
+
+<figure><img src="http://i.imgur.com/3WVXsHW.png" alt="Map"/><figcaption>Map</figcaption></figure>
+
+<p>Find the position of the GPS receiver, marking it on the map and giving its coordinates below.</p>
+
+<p><strong>Answer:</strong></p>
+
+<figure><img src="http://i.imgur.com/KLqTcmw.png"/></figure>
+
+<p>00 N, 1000 E</p>
 
 <h3><em>fin</em></h3>
 
