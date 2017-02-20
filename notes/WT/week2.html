@@ -7,8 +7,8 @@
 		<title>WT Week 2</title>
 	</head>
 <body>
-<a href="week1.html">< Week 1 - Introduction to Wireless Technology</a>
-<a href="week3.html" class="top-right-link">Week 3 - Radio Frequency II ></a>
+<a href="week1.html" id="back">< Week 1 - Introduction to Wireless Technology</a>
+<a href="week3.html" id="next" class="top-right-link">Week 3 - Radio Frequency II ></a>
 
 <h6>WT Week 2</h6>
 
@@ -306,6 +306,14 @@ Length should be a multiple of the wavelength, such as 1/2 or 1/4
   smoothScroll.init({
 		easing: "easeOutQuad",
 	});
+
+	document.onkeydown = (e) => {
+		if (e.keyCode == 37) {
+			document.getElementById('back').click();
+		} else if (e.keyCode == 39) {
+			document.getElementById('next').click();
+		}
+	}
 </script>
 </body>
 </html>

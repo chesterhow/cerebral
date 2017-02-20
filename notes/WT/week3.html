@@ -7,8 +7,8 @@
 		<title>WT Week 3</title>
 	</head>
 <body>
-<a href="week2.html">< Week 2 - Radio Frequency I</a>
-<a href="week4.html" class="top-right-link">Week 4 - Wireless LAN I ></a>
+<a href="week2.html" id="back">< Week 2 - Radio Frequency I</a>
+<a href="week4.html" id="next" class="top-right-link">Week 4 - Wireless LAN I ></a>
 
 <h6>WT Week 3</h6>
 
@@ -236,6 +236,14 @@
   smoothScroll.init({
 		easing: "easeOutQuad",
 	});
+
+	document.onkeydown = (e) => {
+		if (e.keyCode == 37) {
+			document.getElementById('back').click();
+		} else if (e.keyCode == 39) {
+			document.getElementById('next').click();
+		}
+	}
 </script>
 </body>
 </html>

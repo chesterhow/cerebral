@@ -7,8 +7,8 @@
 		<title>WT Week 16</title>
 	</head>
 <body>
-	<a href="week15.html">< Week 11 - Wireless PAN II</a>
-	<a href="../../index.html" class="top-right-link">Home ></a>
+	<a href="week15.html" id="back">< Week 11 - Wireless PAN II</a>
+	<a href="../../index.html" id="next" class="top-right-link">Home ></a>
 
 <h6>WT Week 16</h6>
 
@@ -121,6 +121,14 @@
   smoothScroll.init({
 		easing: "easeOutQuad",
 	});
+
+	document.onkeydown = (e) => {
+		if (e.keyCode == 37) {
+			document.getElementById('back').click();
+		} else if (e.keyCode == 39) {
+			document.getElementById('next').click();
+		}
+	}
 </script>
 </body>
 </html>

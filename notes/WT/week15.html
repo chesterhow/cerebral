@@ -7,8 +7,8 @@
 		<title>WT Week 15</title>
 	</head>
 <body>
-	<a href="week14.html">< Week 14 - Celluar Network Technology II</a>
-	<a href="week16.html" class="top-right-link">Week 16 - Internet of Things ></a>
+	<a href="week14.html" id="back">< Week 14 - Celluar Network Technology II</a>
+	<a href="week16.html" id="next" class="top-right-link">Week 16 - Internet of Things ></a>
 
 <h6>WT Week 15</h6>
 
@@ -528,6 +528,14 @@
   smoothScroll.init({
 		easing: "easeOutQuad",
 	});
+
+	document.onkeydown = (e) => {
+		if (e.keyCode == 37) {
+			document.getElementById('back').click();
+		} else if (e.keyCode == 39) {
+			document.getElementById('next').click();
+		}
+	}
 </script>
 </body>
 </html>

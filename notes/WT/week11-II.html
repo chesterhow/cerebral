@@ -7,8 +7,8 @@
 		<title>WT Week 11 - II</title>
 	</head>
 <body>
-	<a href="week11-I.html">< Week 11 - Wireless PAN I</a>
-	<a href="week13.html" class="top-right-link">Week 13 - Celluar Network Technology ></a>
+	<a href="week11-I.html" id="back">< Week 11 - Wireless PAN I</a>
+	<a href="week13.html" id="next" class="top-right-link">Week 13 - Celluar Network Technology ></a>
 
 <h6>WT Week 11</h6>
 
@@ -163,6 +163,14 @@
   smoothScroll.init({
 		easing: "easeOutQuad",
 	});
+
+	document.onkeydown = (e) => {
+		if (e.keyCode == 37) {
+			document.getElementById('back').click();
+		} else if (e.keyCode == 39) {
+			document.getElementById('next').click();
+		}
+	}
 </script>
 </body>
 </html>
