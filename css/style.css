@@ -335,13 +335,31 @@ a:target, ol#footnotes li:target, sup a:target  {
  */
 
 body {
-  padding: 3% 10%;
   max-width: 1024px;
   margin: 0 auto;
+  padding: 3% 10%;
+  position: relative;
+}
+
+.nav {
+  position: relative;
+  text-align: center;
+}
+
+.home {
+  color: #EA4C89;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.top-left-link {
+  left: 0;
+  position: absolute;
 }
 
 .top-right-link {
-  float: right;
+  right: 0;
+  position: absolute;
 }
 
 .frac {
